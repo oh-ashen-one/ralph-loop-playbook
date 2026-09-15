@@ -1,9 +1,9 @@
-# Production-quality launch kit
+# Production-quality launch kit (law 17)
 
-This directory converts the Rork game study into a hard Ralph preflight. It is
+This directory turns "production quality" into a hard Ralph preflight. It is
 copied into every newly scaffolded project under `scripts/ralph/quality/`.
 
-The gate requires, before Qwen starts:
+The gate requires, before the local model starts:
 
 - sourced, locally staged, ship-approved assets with source, license, SHA-256,
   semantic roles, fallbacks, dimensions/axes, root-motion policy, and complete
@@ -28,21 +28,22 @@ The gate requires, before Qwen starts:
   ship;
 - a quality ledger and honest proof boundaries.
 
-Run manually:
+Run manually inside a scaffolded project:
 
 ```bash
 python3 scripts/ralph/quality/preflight_quality.py --root "$PWD"
 ```
 
-Run its own red/green tests from this playbook repository:
+Run the gate's own red/green tests:
 
 ```bash
-python3 -m unittest reference/quality/test_preflight_quality.py
-python3 -m unittest reference/test_phase_gating.py
-bash reference/test_preflight_assets.sh
-bash reference/test_scaffold_quality.sh
+python3 -m unittest quality/test_preflight_quality.py   # from this repo root
 ```
 
-`reference/scaffold_project.sh` creates `.ralph-quality-required`; when that
-sentinel exists, `run_loop.sh` executes this validator before claiming a GPU
-slot. The sentinel is present by default for every future scaffold.
+`scaffold_project.sh` creates `.ralph-quality-required`; when that sentinel
+exists, `run_loop.sh` executes this validator before claiming a GPU slot. The
+sentinel is present by default for every new scaffold.
+
+`contract.example.json` / `QUALITY-LEDGER.example.md` (repo-root `quality/`
+only) are a worked, shipped example: what a filled contract and ledger
+actually look like.
