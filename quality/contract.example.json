@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "projectName": "pitfight",
+  "dimensions": "2d",
+  "productFantasy": "You are a bare-knuckle pit fighter trading brutal, readable blows in a torchlit arena, and every landed hit feels like it costs the other body something.",
+  "assetManifest": "assets/asset-manifest.json",
+  "requiredPhases": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "humanCheckpoints": [
+    2,
+    7
+  ],
+  "requiredStoryClasses": [
+    "vertical-slice",
+    "look-lock",
+    "asset-integration",
+    "feedback-atom",
+    "camera-input",
+    "performance-resilience",
+    "critique-ship"
+  ],
+  "requiredAssetRoles": [
+    "hero",
+    "environment-kit",
+    "primary-interactable"
+  ],
+  "requiredCharacterClipRoles": [
+    "idle",
+    "locomotion",
+    "primaryAction",
+    "hitOrFail"
+  ],
+  "productShell": {
+    "coreFlows": [
+      "boot",
+      "menu",
+      "play",
+      "pause",
+      "failure",
+      "restart",
+      "settings"
+    ],
+    "persistenceContract": "Match state is session-only by design; the only persisted value is the settings block (master volume, screenshake scale) in user://pitfight.cfg. A missing or unparsable file is replaced with defaults at boot and never blocks play.",
+    "loadingFallback": "All assets are local res:// files loaded synchronously at scene instantiation; there is no network path. If a sprite frame fails to load the fighter falls back to its idle frame and the match continues.",
+    "missingMediaFallback": "Missing audio stream = silent hit, gameplay unaffected. Missing sprite clip = hold last valid frame. Missing arena decor = flat void background. Never a crash, never a blocked round."
+  },
+  "assetIo": {
+    "maxConcurrentLoads": 4,
+    "retryAttempts": 1,
+    "timeoutMs": 2000,
+    "backoffPolicy": "single immediate retry then fallback frame; no exponential backoff needed for local-only res:// loads",
+    "localOnlyAtShip": true
+  },
+  "sharedSimulation": [
+    {
+      "quantity": "floor line / ground contact height (FLOOR_Y = 620.0)",
+      "source": "src/arena/arena.tscn Ground StaticBody2D collider top edge; fighters derive contact from is_on_floor(), never from a hardcoded y",
+      "consumers": [
+        "src/fighter/fighter.gd",
+        "main.gd camera framing",
+        "tests/test_arena_boot.gd"
+      ]
+    },
+    {
+      "quantity": "attack timing (startup/active/recovery frame counts)",
+      "source": "Fighter const block: PUNCH_STARTUP/ACTIVE/RECOVERY, KICK_*, SPECIAL_*",
+      "consumers": [
+        "src/fighter/fighter.gd _process_attack",
+        "src/fighter/ai_brain.gd",
+        "tests/test_punch.gd",
+        "tests/test_kick.gd"
+      ]
+    }
+  ],
+  "referenceContract": [
+    {
+      "id": "reference-01",
+      "source": "KayKit Adventurers Character Pack 1.0 \u2014 Kay Lousberg, CC0 (https://kaylousberg.itch.io/kaykit-adventurers)",
+      "localPath": "quality/references/kaykit-license.txt",
+      "sha256": "ae322141814056dda0deea7540d74c41d87aee1da319977cd1bd84ee5a923629",
+      "learn": [
+        "rigged humanoid proportions that stay readable at ~150px on-screen height",
+        "unarmed combat clip vocabulary: distinct idle / walk / punch / kick / block / hit / death silhouettes",
+        "flat stylized shading that survives a hard side-profile ortho render"
+      ],
+      "mustNotCopy": [
+        "Mortal Kombat / Injustice character names, likenesses, logos or fatality staging",
+        "any referenced game's exact HUD layout, arena trade dress, or announcer lines",
+        "KayKit's own promo art, itch page layout, or branding"
+      ],
+      "evidenceId": "title"
+    }
+  ],
+  "actionBeats": [
+    {
+      "id": "primary-action-beat",
+      "stateResult": "opponent health -8 (punch) and 12 frames of hit-stun that cancels their in-progress attack",
+      "timelineMs": {
+        "anticipation": 67,
+        "contact": 50,
+        "response": 100,
+        "settle": 200
+      },
+      "channels": [
+        "state",
+        "motion",
+        "visual",
+        "audio",
+        "hud",
+        "camera"
+      ],
+      "evidenceIds": [
+        "primary-action"
+      ]
+    },
+    {
+      "id": "ko-beat",
+      "stateResult": "round_active false, winner pip fills, match advances or ends; Engine.time_scale 0.25 then restored to 1.0",
+      "timelineMs": {
+        "anticipation": 0,
+        "contact": 50,
+        "response": 1200,
+        "settle": 900
+      },
+      "channels": [
+        "state",
+        "motion",
+        "visual",
+        "audio",
+        "hud",
+        "camera"
+      ],
+      "evidenceIds": [
+        "failure"
+      ]
+    },
+    {
+      "id": "traversal-beat",
+      "stateResult": "RAZOR displaces >4u per 60 frames of held direction and the camera keeps both fighters framed",
+      "timelineMs": {
+        "anticipation": 0,
+        "contact": 16,
+        "response": 50,
+        "settle": 120
+      },
+      "channels": [
+        "state",
+        "motion",
+        "visual",
+        "audio",
+        "hud"
+      ],
+      "evidenceIds": [
+        "traversal"
+      ]
+    }
+  ],
+  "canonicalEvidence": [
+    {
+      "id": "title",
+      "seed": 1,
+      "state": "boot to menu with the tree paused",
+      "camera": "FightCam default framing",
+      "viewport": [
+        1280,
+        720
+      ],
+      "assertions": [
+        "PITFIGHT title legible",
+        "FIGHT button visible",
+        "controls card names WASD and J"
+      ]
+    },
+    {
+      "id": "fight-open",
+      "seed": 1,
+      "state": "FIGHT pressed, round_active true, 30 physics frames elapsed",
+      "camera": "FightCam tracking the fighters' midpoint",
+      "viewport": [
+        1280,
+        720
+      ],
+      "assertions": [
+        "both fighters fully in frame with feet on the floor line",
+        "both health bars full",
+        "RAZOR and GRIM name plates legible"
+      ]
+    },
+    {
+      "id": "traversal",
+      "seed": 1,
+      "state": "p1_right held for 45 physics frames from spawn",
+      "camera": "FightCam tracking midpoint with smoothing",
+      "viewport": [
+        1280,
+        720
+      ],
+      "assertions": [
+        "RAZOR has moved right of spawn",
+        "both fighters still in frame",
+        "no arena edge visible"
+      ]
+    },
+    {
+      "id": "primary-action",
+      "seed": 1,
+      "state": "P1 punch sampled at the contact frame on GRIM",
+      "camera": "FightCam",
+      "viewport": [
+        1280,
+        720
+      ],
+      "assertions": [
+        "victim white flash visible",
+        "blood burst emitting",
+        "P2 health bar below full"
+      ]
+    },
+    {
+      "id": "failure",
+      "seed": 1,
+      "state": "force_ko(2) then 30 frames",
+      "camera": "FightCam during KO slow-mo",
+      "viewport": [
+        1280,
+        720
+      ],
+      "assertions": [
+        "K.O. banner in blood red",
+        "loser playing the death clip",
+        "one P1 round pip filled amber"
+      ]
+    },
+    {
+      "id": "mobile",
+      "seed": 1,
+      "state": "FIGHT pressed, round_active, 30 frames, portrait viewport",
+      "camera": "FightCam with portrait safe-area framing",
+      "viewport": [
+        390,
+        844
+      ],
+      "assertions": [
+        "both fighters in frame",
+        "health bars and timer inside the safe area",
+        "no HUD element clipped"
+      ]
+    },
+    {
+      "id": "worst-performance",
+      "seed": 1,
+      "state": "both fighters mid-attack, two blood bursts emitting, both braziers animating, screenshake active",
+      "camera": "FightCam at nearest zoom",
+      "viewport": [
+        1280,
+        720
+      ],
+      "assertions": [
+        "frame time within budget",
+        "all fighters and HUD still legible",
+        "no dropped feedback channel"
+      ]
+    }
+  ],
+  "performanceTiers": [
+    {
+      "id": "target",
+      "device": "Apple-silicon desktop, Godot 4.7 Forward Mobile renderer, windowed 1280x720",
+      "worstScene": "both fighters mid-attack with two blood bursts emitting, two brazier flames animating and screenshake active",
+      "durationSeconds": 20,
+      "maxP95FrameMs": 16.6,
+      "maxDrawCalls": 220,
+      "maxActiveObjects": 140,
+      "maxParticles": 96,
+      "maxPixelRatio": 2,
+      "maxConcurrentAssetLoads": 4,
+      "maxResidentAssetMB": 96,
+      "poolBudgets": {
+        "blood_burst": 6,
+        "projectile": 4
+      },
+      "preserve": [
+        "fighter sprite animation",
+        "hit flash",
+        "health bar response",
+        "attack timing readability"
+      ],
+      "degradeOrder": [
+        "brazier flicker",
+        "horizon glow",
+        "blood burst amount",
+        "screenshake"
+      ]
+    }
+  ],
+  "inputMatrix": [
+    {
+      "device": "keyboard (desktop)",
+      "viewport": [
+        1280,
+        720
+      ],
+      "input": "A/D walk, W jump, S crouch, J punch, K kick, L block hold, U special, ESC pause",
+      "firstAction": "press FIGHT, then J lands a punch within 5 seconds of boot",
+      "minTargetPx": 44,
+      "probe": "tests_staged/test_integration.gd"
+    },
+    {
+      "device": "portrait touch/small viewport",
+      "viewport": [
+        390,
+        844
+      ],
+      "input": "same action map; HUD and banners must stay inside the safe area at portrait aspect",
+      "firstAction": "FIGHT button reachable and tappable at 390x844 without clipping",
+      "minTargetPx": 44,
+      "probe": "tests_staged/test_mobile_hud.gd"
+    }
+  ],
+  "debugBridge": {
+    "transport": "Godot headless SceneTree script (tools/shot.gd style) driving main.tscn directly; no in-game console",
+    "capabilities": [
+      "reset",
+      "start",
+      "stepOrSeek",
+      "input",
+      "setCamera",
+      "setUi",
+      "state",
+      "metrics",
+      "screenshot"
+    ]
+  },
+  "proofBoundary": {
+    "buildGate": "bash scripts/ralph/godot/verify-parse.sh && bash scripts/ralph/godot/verify-gut.sh",
+    "runtimeGate": "godot --path . for 30s with zero SCRIPT ERROR/Parse Error lines, plus canonical evidence capture via tools/shot.gd",
+    "targetDevice": "Apple-silicon desktop, Godot 4.7, 1280x720 windowed",
+    "humanPlaytestRequired": true
+  }
+}

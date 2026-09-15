@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "projectName": "{{PROJECT}}",
+  "dimensions": "{{DIMENSIONS}}",
+  "productFantasy": "FILL_ME: one sentence naming who the player is, what they do, and what they feel",
+  "assetManifest": "assets/asset-manifest.json",
+  "requiredPhases": [1, 2, 3, 4, 5, 6, 7],
+  "humanCheckpoints": [2, 7],
+  "requiredStoryClasses": [
+    "vertical-slice",
+    "look-lock",
+    "asset-integration",
+    "feedback-atom",
+    "camera-input",
+    "performance-resilience",
+    "critique-ship"
+  ],
+  "requiredAssetRoles": ["hero", "environment-kit", "primary-interactable"],
+  "requiredCharacterClipRoles": ["idle", "locomotion", "primaryAction", "hitOrFail"],
+  "productShell": {
+    "coreFlows": ["boot", "menu", "play", "pause", "failure", "restart", "settings"],
+    "persistenceContract": "FILL_ME: what survives relaunch and how corruption is recovered",
+    "loadingFallback": "FILL_ME: branded loading, timeout, retry, and offline behavior",
+    "missingMediaFallback": "FILL_ME: fidelity degrades without blocking play"
+  },
+  "assetIo": {
+    "maxConcurrentLoads": 0,
+    "retryAttempts": 0,
+    "timeoutMs": 0,
+    "backoffPolicy": "FILL_ME",
+    "localOnlyAtShip": true
+  },
+  "sharedSimulation": [
+    {
+      "quantity": "FILL_ME: terrain/water/collision/timing/racing-line truth",
+      "source": "FILL_ME: one authoritative implementation or data table",
+      "consumers": ["FILL_ME: renderer", "FILL_ME: gameplay/physics/AI"]
+    }
+  ],
+  "referenceContract": [
+    {
+      "id": "reference-01",
+      "source": "FILL_ME: URL or local reference path",
+      "localPath": "quality/references/FILL_ME",
+      "sha256": "FILL_ME",
+      "learn": ["FILL_ME: named lighting, material, silhouette, density, framing, or motion mechanism"],
+      "mustNotCopy": ["FILL_ME: characters, branding, exact layout, trade dress, or other recognizable IP"],
+      "evidenceId": "title"
+    }
+  ],
+  "actionBeats": [
+    {
+      "id": "primary-action-beat",
+      "stateResult": "FILL_ME: measurable gameplay delta",
+      "timelineMs": {"anticipation": 0, "contact": 0, "response": 0, "settle": 0},
+      "channels": ["state", "motion", "visual", "audio", "hud"],
+      "evidenceIds": ["primary-action"]
+    }
+  ],
+  "canonicalEvidence": [
+    {"id": "title", "seed": 1, "state": "FILL_ME", "camera": "FILL_ME", "viewport": [1280, 720], "assertions": ["FILL_ME"]},
+    {"id": "traversal", "seed": 1, "state": "FILL_ME", "camera": "FILL_ME", "viewport": [1280, 720], "assertions": ["FILL_ME"]},
+    {"id": "primary-action", "seed": 1, "state": "FILL_ME", "camera": "FILL_ME", "viewport": [1280, 720], "assertions": ["FILL_ME"]},
+    {"id": "failure", "seed": 1, "state": "FILL_ME", "camera": "FILL_ME", "viewport": [1280, 720], "assertions": ["FILL_ME"]},
+    {"id": "mobile", "seed": 1, "state": "FILL_ME", "camera": "FILL_ME", "viewport": [390, 844], "assertions": ["FILL_ME"]},
+    {"id": "worst-performance", "seed": 1, "state": "FILL_ME", "camera": "FILL_ME", "viewport": [1280, 720], "assertions": ["FILL_ME"]}
+  ],
+  "performanceTiers": [
+    {
+      "id": "target",
+      "device": "FILL_ME: real target or explicit emulator/browser class",
+      "worstScene": "FILL_ME: named deterministic state",
+      "durationSeconds": 0,
+      "maxP95FrameMs": 0,
+      "maxDrawCalls": 0,
+      "maxActiveObjects": 0,
+      "maxParticles": 0,
+      "maxPixelRatio": 0,
+      "maxConcurrentAssetLoads": 0,
+      "maxResidentAssetMB": 0,
+      "poolBudgets": {"FILL_ME": 0},
+      "preserve": ["FILL_ME: essential motion/readability/feedback"],
+      "degradeOrder": ["FILL_ME: ordered optional effects"]
+    }
+  ],
+  "inputMatrix": [
+    {
+      "device": "FILL_ME",
+      "viewport": [1280, 720],
+      "input": "FILL_ME",
+      "firstAction": "FILL_ME",
+      "minTargetPx": 0,
+      "probe": "tests_staged/test_q05_camera_input.sh"
+    }
+  ],
+  "debugBridge": {
+    "transport": "FILL_ME: browser global, Godot sim/autoload, Unity test bootstrap, or iOS launch arguments",
+    "capabilities": ["reset", "start", "stepOrSeek", "input", "setCamera", "setUi", "state", "metrics", "screenshot"]
+  },
+  "proofBoundary": {
+    "buildGate": "FILL_ME",
+    "runtimeGate": "FILL_ME",
+    "targetDevice": "FILL_ME",
+    "humanPlaytestRequired": true
+  }
+}
