@@ -375,6 +375,19 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Measured result,15:07:53 UTC:**286 CPU tests pass on both Macs; scoped ground PASS is recorded on unchanged source248c1cd. The same queue/q0108 is running corrected local mission design. Accepted broad baselinec9bbf1ac, failure history and October8 cap are unchanged. [Native results and diagnosis](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/8c72847/diagnostics/map-2026-10-06/street-ground-native-and-citation-recovery.json).
 - **Prevention/status:** citation validation now accepts explicit seconds units only at token boundaries and still rejects ambiguous/unmatched times; tests cover absent frames, coordinate-only text, altered response hashes and unchanged verdict content. Do not rerun already completed generation solely to satisfy an unnecessarily narrow formatting rule.
 
+## N41 — Small partials saved the feature, but each still needed real API validation
+
+- **Observed:** the first whole-relay role exhausted10,000tokens without a tool call. Three bounded local roles then saved state, original-mesh props and HUD plus the installation at42084b6. The native build rejected the state file's missing UnityEngine import; imports in another partial do not apply to it. Static review also found nonexistent LoopInput.Mode and a timeout-before-outcome check that could fail an already completed relay.
+- **Repair:** local Qwen added the import, changed only the mode reference to LoopSignals.Mode, moved the completed/failed return ahead of countdown, and clarified distance units. The passive observer now finds a child TextMesh instead of falsely treating that valid hierarchy as missing HUD. [2724c30 repair](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/2724c30/tools/resume_relay_source_repairs.py).
+- **Measured outcome,16:02:31 UTC:** repaired source8ef7137 passes native ordered interactions, actual27.100second relay progression, completion latched beyond deadline, wrong-order reset, unchanged45second timeout, global reset and no-handoff inactivity.291CPUtests pass on both Macs. All-ten regressions/fresh pixel critique remain pending; no broad checkpoint or ten-minute claim.
+- **Prevention/status:** separate interface/state/geometry/UI roles with exact prior partial context; compile the combined source and verify actual input APIs. Deadline tests must cover both failure and success retained beyond the deadline. Validation waiting never adds story duration.
+
+## N42 — Management connectivity did not establish checkpoint publication
+
+- **Observed:** after the management connection gap, M5 game execution could run while the public branch remained at248c1cd. The old publisher PID was absent; its log ended near15:15UTC. The exact cause of publisher termination is unverified.
+- **Recovery,16:01UTC:** verified no publisher remained, then restored the same transport with unchanged branch/config/deadline, preserving the old receipt. No additional game owner was created. GitHub then confirmed source8ef7137. DS1 and unrelated processes were untouched.
+- **Prevention/status:** check actual controller/request/engine ownership and last published commit separately from catalog connectivity. A connected management tool is not proof that either the game or its checkpoint transport resumed.
+
 ## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate
