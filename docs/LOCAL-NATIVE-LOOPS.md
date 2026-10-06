@@ -80,6 +80,13 @@ Keep it in a fresh context. Re-review changed source; never reuse a critique
 because a filename looks the same. Do not let a polish critic reopen accepted
 mechanics or relocate objectives without a separately scoped decision.
 
+Keep passed regression receipts concise in visual prompts. Repeating every
+sample tree can exhaust context before the API call even when the image set
+is modest. Validate full immutable evidence outside the prompt, then send the
+current source/build identity, relevant facts, named passes and unchanged
+images. A compact prompt must not turn failed or mismatched evidence into a
+pass. Preserve the original rejection and independent verdict. See N43.
+
 ## Keep edits small without cutting syntax in half
 
 Prefer exact preimage-checked spans, or one bounded new module with a known
@@ -159,6 +166,25 @@ limits; it is not final visual acceptance. Record accepted commit, source/build
 hashes, scenario, capture manifest, checks and critique immutably. Resume an
 unfinished suite from prior evidence only when all those identities match and
 integrity validation succeeds; keep interrupted and resumed evidence separate.
+
+Distinguish compiled artifact reuse from replay evidence reuse. The implemented
+in-owner cache in N44 keys the complete pre-build source/assets/harness tree,
+editor binary and candidate. It verifies the compiled tree, symlink targets,
+permissions and compile receipt before copying. Each scenario still launches
+a fresh player and records its own ordinary inputs, trace, native images and
+red/positive checks. Changed inputs invalidate reuse; a changed cached binary
+stops it. CPU cache tests alone do not establish native equivalence or speedup.
+
+Label diagnostic fixtures visibly in delivery: a test wall or cover object is
+not new scenery. A still shows rendered appearance, while damage, obstruction
+and reset claims require matched input and state traces. Batch-mode Metal
+selection and valid offscreen PNGs do not establish sustained GPU load or
+interactive frame rate. Do not manufacture load to improve a utilization graph.
+
+Validate shader availability in the standalone player, not only compilation.
+A name lookup can fail when the shader was not included in the build. Preserve
+the first initialization error; repeated later null references may only be its
+consequences. Explicit local resources/references still need a new native run.
 
 ## Recover with evidence and stop limits
 
