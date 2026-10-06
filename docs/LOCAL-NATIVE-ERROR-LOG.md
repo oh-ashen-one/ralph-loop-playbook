@@ -147,6 +147,15 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Prevention/status:** ownership locks, single request guard and fixed-cap timer are **implemented**; fresh observation/reporting cadence is a **procedure**. Recheck liveness before saying "running". Do not create a duplicate watchdog or schedule to compensate for a stale message.
 - **Evidence:** [controller runbook][runbook], [deadline and delivery policy][delivery], [exact recovery boundary][compile].
 
+## N16 — Recoverable map rejection left the owner idle
+
+- **Symptom:** q0057's real traversal rejection restored the accepted tree and paused the sole controller. The owner observed no GPU activity. At 04:58:51 UTC the model was healthy/loaded-idle and there was no controller PID; this was an actual pause, not merely low GPU utilization during useful work.
+- **Cause status:** verified controller policy mismatch. Historical task failures had reached the generic repeated-blocker ceiling, so a new measurable route failure inherited an immediate stop despite the owner's continuous managed-work instruction. Documentation and commentary did not themselves restart or notify the supervising thread.
+- **Failed approach:** repeatedly describe recovery as a procedure while leaving this recoverable native failure paused; treat launch admission as proof that a process/request is active.
+- **Repair/outcome:** controller `722cb62` adds a map-specific transition: only listed physical replay failures after successful build/player exit can enter at most three local changed-strategy attempts. Exact replay hashes reject identical physical actions despite changed captions or capture times. Counters, accepted checkpoint and deadline remain intact. At **05:05:25 UTC**, the sole controller was live in q0058 with **one actual local-model request and zero waiting requests**. This establishes resumed execution, not native acceptance of the new route.
+- **Prevention/status:** routing, attempt cap, unchanged-replay rejection, state persistence and explicit blocker artifact are **implemented/tested** (181 CPU tests on both hosts, including a real Store transition test). Unsupported/resource/permission failures and budget exhaustion take the blocker route. The blocker file is marked **pending existing parent oversight**; no guaranteed immediate delivery or universal recovery is claimed. No second watchdog, schedule or model was launched. A transient SSH failure was resolved by checking the unique receipt and PID rather than duplicating launch.
+- **Evidence:** [bounded recovery policy](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/722cb62d9c2d034b7b59d184c638c3fee6efef31/tools/loop_controller/recovery_policy.py), [sole-owner recovery](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/722cb62d9c2d034b7b59d184c638c3fee6efef31/tools/resume_map_traversal.py), [routing/state regression tests](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/722cb62d9c2d034b7b59d184c638c3fee6efef31/tests/test_recovery_policy.py).
+
 ## Add the next incident
 
 Record: timestamp and scope; observed symptom; proven cause and separate

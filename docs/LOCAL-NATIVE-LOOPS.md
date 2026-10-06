@@ -143,6 +143,15 @@ constraint; validate the guard with a red case; run one scoped recovery.
 Do not erase original failures, reset counters to bypass policy, or silently
 turn a process-scan fault into an automatic server restart loop.
 
+The map recovery added on October 6 implements one concrete version of this
+policy: a whitelist of physical traversal failures after successful native
+execution routes to at most three changed local replays. Repeated physical
+input sequences are rejected; existing counters are retained. Exhaustion or
+unsupported failures persist an explicit blocker for existing parent oversight.
+The same owner performs recovery; no additional watchdog is created. This is
+a tested map-specific transition, not a guarantee that every recoverable fault
+is recognized or that a persisted report has already reached a person. See N16.
+
 Known process enumeration errors should discard any partial inventory before
 a bounded retry. Persistent or unrelated errors must stop. A suspected exit
 race remains a hypothesis until measured. Use immutable deployed resident
