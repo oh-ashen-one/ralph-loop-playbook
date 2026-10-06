@@ -19,6 +19,7 @@ presented as a completed ten-minute release.
 | `FAILURES.md` | 81 historical failure cases, including superseded repairs |
 | `docs/LOCAL-NATIVE-LOOPS.md` | Current native tool profile: prompts, budgets, assets, physical/visual gates, ownership and scope |
 | `docs/LOCAL-NATIVE-ERROR-LOG.md` | Dated incidents with cause status, failed attempts, effective repairs, pinned evidence and prevention status |
+| `docs/RUNTIME-RECOVERY-2026-10-06.md` | Exact official runtime recovery, matched speed evidence, failed requests, startup procedure and deployed progress guards |
 | `docs/` | The playbook, harness internals, manager runbook, story/prompt authoring, engine & tooling rankings, overnight checklist, pre-mortem method, anti-slop design bibles, CC0 asset sourcing, Blender modeling, ops (phase gates, GPU slots, watchdogs) |
 | `reference/` | Battle-tested runner scripts: iteration runners (plain + phase-gated), loop script, supervisor with typed exit routing, project scaffold, stuck detector, Godot verify wrappers, prompt/grounding templates |
 | `quality/` | The law-17 production-quality contract: brief/contract/prd/ledger templates + a launch-blocking preflight validator + worked examples from a shipped game |

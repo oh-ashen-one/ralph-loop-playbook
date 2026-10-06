@@ -20,6 +20,13 @@ context does **not** require restarting or reloading a healthy model.
 Distinguish saved source, native behavior, accepted subfeatures, and the
 finished product. None implies the next.
 
+For runtime setup or unexplained slowdown, begin with a published compatible
+configuration and short representative speed/tool/image checks. Read the
+[qualified runtime recovery](docs/RUNTIME-RECOVERY-2026-10-06.md) for exact
+provenance, sustained progress guards, isolated updates and rollback criteria.
+Distinguish its deployed project controls from its general operating procedure;
+do not turn healthy token activity into a claim of saved artifact progress.
+
 ## Establish the active contract first
 
 Read the current owner directive, repository instructions, live state,

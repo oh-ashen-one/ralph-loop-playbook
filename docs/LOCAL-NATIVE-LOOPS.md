@@ -27,6 +27,15 @@ faults and authorization changes explicitly rather than silently lifting caps.
 
 ## Prompt with evidence and a concrete next action
 
+Before long authoring, use a published compatible runtime configuration and
+qualify only the representative speed/tool/image paths the task needs. Preserve
+exact versions, settings and a rollback environment. Compare sustained decode
+and saved/exported artifacts separately; do not spend hours on a slow advancing
+request. The [October 6 recovery](RUNTIME-RECOVERY-2026-10-06.md) records the
+measured 2.60→73.37 tok/s text recovery, exact dependencies, implemented guards
+and startup/rollback procedures. Its thresholds are a qualified project policy,
+not a universal hardware benchmark or an automatic installer.
+
 A useful task packet contains the current revision, exact relevant source,
 observed symptom, allowed change, constraints, tool schema, output ceiling,
 and what will independently establish success. Include call sites and object
