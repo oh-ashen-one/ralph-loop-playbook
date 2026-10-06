@@ -214,6 +214,17 @@ visible limits and next measurable action. Launch success alone does not prove
 continued liveness. Deliver it through the actual parent/user reporting route;
 commentary in a child workspace is not guaranteed to reach oversight.
 
+Distinguish a socket inactivity timeout from a wall-clock deadline. A server
+sending keepalive data can keep a nonstreaming request open beyond the configured
+socket timeout. Check the exact request's generated-token count and last-token
+age through supported runtime telemetry; an active queue label alone is not
+enough. N53's deployed watchdog requires two matching stale observations,
+verifies the owner's PID creation time and round, and exits when that response
+is saved or the original request ends. Failed telemetry does not prove a stall.
+Keep the output cap and project deadline, preserve returned output, and use a
+focused continuation after a budget stop rather than repeating the same broad
+request. Advancing tokens do not establish a saved or usable artifact.
+
 Shared-slot waiting must release the capacity the waiter needs. During a
 resident-to-engine handoff, preserve the identity-checked handoff while the
 resident yields; handle only explicit queue/holder/occupied-slot responses as
