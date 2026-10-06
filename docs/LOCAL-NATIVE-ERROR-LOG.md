@@ -306,6 +306,34 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Prevention/status:** preserved-state/evidence guards are **implemented/tested**. The connected mission architecture, additional acceptance and source changes are still **pending**, not proven fixes. Keep short component contracts and full-route completion distinct; require real actions and varied progression, never waiting as gameplay.
 - **Evidence:** [bounded milestones](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/7f29742/docs/CONNECTED-MISSION-MILESTONES.md), [scope/evidence red cases](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/7f29742/tests/test_mission_pacing_design.py).
 
+## N32 — A negative probe still has to satisfy the shared runtime contract
+
+- **Symptom:** q0095's no-handoff chapter probe failed with an apparent premature-activation diagnosis. Its input consisted only of remote F presses.
+- **Proven cause:** the native gate rejected missing input-driven player motion, before chapter evaluation. All 173 saved samples actually kept chapter stage0/incomplete and the legacy courier active. The initial controller halt text misclassified the failing layer.
+- **Repair/outcome:** [8cc8a4d](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/8cc8a4d/tools/resume_chapter_negative_probe.py) added normal walking to the probe while retaining remote F and every shared runtime/chapter gate. The subsequent no-handoff native probe passed. No gameplay source change receives credit for this harness correction.
+- **Prevention/status:** negative probes must meet unrelated baseline admission requirements. Report the actual failing gate, then evaluate the intended red case. The unchanged full chapter later passed at `3f5a0ef`; this is a short component, not a ten-minute game.
+
+## N33 — Broad visibility guards can reject a valid new UI component
+
+- **Symptom:** q0097 supplied a complete 72-line local HUD replacement, but the controller rejected `SetActive(false)` even though it targeted the newly created chapter card. The old courier receipt was still protected and visible.
+- **Proven cause:** a blanket string guard could not distinguish hiding an inactive new card from suppressing legacy state. This was an external edit-guard rejection, not missing local source output.
+- **Repair/outcome:** [f6c1b2f](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/f6c1b2f/tools/resume_saved_chapter_hud.py) recovered the exact hash-pinned, complete tool proposal and allowed only its own-card visibility expression. Changed/truncated responses and legacy hiding remain rejected. Local Qwen then corrected the cloned backing depth/size and disabled only that new UI collider. Native frames show the main chapter objective legibly; old receipt clutter and final composition remain open.
+- **Prevention/status:** target edit permissions at the owned object and state surface. Recover complete rejected submissions only with provenance; never reconstruct unfinished private model output or silently broaden legacy authority. [Red cases](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/f6c1b2f/tests/test_chapter_route_probe.py).
+
+## N34 — A later generic selector overwrote correct chapter evidence
+
+- **Symptom:** q0098's fresh critic returned FIX and claimed that the new cache was the old courier pad, that the live50m distance was frozen, and that no on-foot frame existed. The chapter and all ten regressions passed independently.
+- **Proven cause:** `review_captures` first selected chapter frames, then a later generic `mission_complete` branch overwrote that selection with legacy courier frames. The helper's unit test passed while the final dispatcher was wrong. The reviewer also conflated legacy Mission==complete with the additive chapter's completion.
+- **Repair/status at13:08 UTC:** [798b2cb](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/798b2cb/tools/continue_game_queue.py) prevents the overwrite and adds a dispatcher regression. Actual chapter captures now include activation, nearest driving approach, on-foot approach, chapter completion and reset. Explicit evidence separates legacy anchor `(1,0.15,26)` from new cache `(50,0.14,18)`. The original FIX is preserved; the corrected review is pending, and genuine HUD/marker/camera quality gaps remain open.
+- **Prevention/status:** verify the final evidence delivered to each role, including filenames, capture times, state and scope. Test composition/dispatch, not only a selection helper. [Sanitized measured diagnosis](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/798b2cb/diagnostics/map-2026-10-06/chapter-review-routing.json).
+
+## N35 — An added proof image exceeded bounded critic context
+
+- **Symptom:** q0099's corrected chapter critic stopped before inference. There was no request history, generated response or game edit.
+- **Proven cause:** five actual chapter frames plus the art reference produced a conservative prompt bound58,849; adding8,192 output tokens exceeded the65,536 working-context budget. The unchanged admission guard correctly rejected it.
+- **Repair/status:** [b003752](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/b003752/tools/resume_chapter_review_context.py) preserves the rejection and separates role evidence: five actual frames for chapter mechanics/presentation without the style reference; four chapter frames plus that reference for the following facade-art review. No context/output limit was raised, and reset remains a mandatory native contract even when omitted from the narrow facade critic's image set. All270 CPU tests pass on both hosts. Same queue resumed at13:08:13 UTC; actual fresh-review outcome remains pending.
+- **Prevention/status:** budget the final assembled prompt, including image count, framing reserve and output allowance, before opening a role. A context admission rejection is not a model-generated verdict or substantive gameplay failure.
+
 ## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate
