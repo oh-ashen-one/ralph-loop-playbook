@@ -48,6 +48,13 @@ stationary startup, bounded duration and capture times. State the physical
 outcome, not invented coordinates supposedly achieved. Separate syntax
 validation from real engine execution. A timing proposal is not a playthrough.
 
+For a saved presentation-only change, first inspect the exact diff. Reuse a
+proven physical replay only when the source scope and prior evidence identities
+justify it; run it again against the new source and obtain fresh review. Do not
+ask for a ten-minute mission replay merely because a door/material edit occurred
+inside a broad polish stage. Give topology, facade presentation and mission
+pacing separate observable scopes. See N25.
+
 When a multi-part replay keeps exhausting output, preserve a native-observed
 successful prefix and narrow the failing suffix to a few explicit fields.
 For example, one tested recovery requested three numeric axis-travel durations
@@ -185,8 +192,8 @@ explicitly elsewhere:
 
 | Milestone | Required evidence | Status in the studied run at this update |
 |---|---|---|
-| First connector | Walk and drive ≥6 m beyond the old boundary, remain outside ≥1 s, capture both modes, physically return, visible support, regressions, fresh review | Gate implemented; map acceptance still pending |
-| Two streets plus side alley | Connected routes, provisional ≥60 m on one axis and ≥20 m across; objective outside the original core | Planning target; not an implemented complete-map gate |
+| First connector | Walk and drive ≥6 m beyond the old boundary, remain outside ≥1 s, capture both modes, physically return, visible support, regressions, fresh review | Accepted at08:17UTC in `c9bbf1a`; rough-art caveats remain |
+| Two streets plus side alley | Connected routes, provisional ≥60 m on one axis and ≥20 m across; objective outside the original core | Second traversal gate now measures beyond both accepted rectangles; full size/objective acceptance remains pending |
 | Ten-minute mission | Meaningful start/objectives/failure/retry/ending, measured roughly 540–660 s without idle padding | Whole-route checks exist; final mission not accepted |
 | Final presentation | Readable movement/driving camera, authored assets/animation, coherent street/light/audio, representative playthrough | Unaccepted; test count is not a quality score |
 
