@@ -201,3 +201,11 @@ Prioritize a blocking correctness failure, then advance topology/objectives
 and meaningful duration. Avoid repeatedly polishing minor trim or controller
 infrastructure while these measures remain static. This prioritization is
 management policy, not a claim that an automated quality scheduler enforces it.
+
+A cosmetic FIX may remain explicitly unresolved while a separately authorized
+topology task proceeds. Preserve its verdict, evidence, failure counts and last
+accepted checkpoint; label the current working source unaccepted. Record the
+deferred findings in later scoped receipts. Do not turn advancement to another
+task into a claim that the failed visual criterion passed. The studied N25
+continuation implements this exact transition; it does not excuse mechanical
+regressions or final presentation requirements.
