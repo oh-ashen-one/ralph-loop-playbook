@@ -39,6 +39,8 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Prevention/status:** bounded edit/output tools are **implemented**; task decomposition is a **procedure**. Record token usage, finish reason and tool calls; reject truncated source. Do not claim a universal line limit or model incapability.
 - **Evidence:** [map chronology][map], [small-span controller][spans].
 
+**Follow-up, 05:11 UTC:** q0058's combined geometry/complete-route role also stopped at 8,192 output tokens (17,151 prompt tokens, 207.91 s, zero tool calls). No native attempt or changed strategy was submitted. The explicit blocker route worked, but the combined request did not. The next bounded approach separates a short walking/boarding prefix, native proof of that prefix, and a local driving suffix that cannot rewrite the verified inputs. Controller [73fc41f](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/73fc41fc20d1937ca999b95ba1a298f5c34e0f8d/tools/resume_map_walk_first.py) has 183 passing CPU tests on both hosts. This is a changed task shape under validation, not a proven cure for output exhaustion or an accepted map.
+
 ## N04 — Complete proposal rejected by a line ceiling
 
 - **Symptom:** q0054 emitted one complete 47-line, 3,041-byte pavement tool call against a 45-line cap.
