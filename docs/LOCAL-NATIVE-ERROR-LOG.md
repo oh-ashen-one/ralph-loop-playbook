@@ -200,6 +200,8 @@ the conclusions. Scope is this run, not a universal model capability claim.
 
 **N20 native outcome, 06:24 UTC:** q0070 source **`d5260465`** passes the **unchanged** failed map replay after the local body/reset repair. Walking travels 6.533 m outside and returns at15.97 s; vehicle travels13.768 m outside and returns at33.63 s. All188walking support samples and vehicle rendered support pass, with real outside captures. The same owner automatically starts all ten regressions; fresh visual critique and promotion remain pending. This is measured evidence for the collision diagnosis and repair, without changing replay timings or disabling collisions. [Native proof](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/26949bb/diagnostics/map-2026-10-06/rival-repair-native-pass.json).
 
+**N20 qualification, 06:35 UTC:** all ten current-source regressions passed. Fresh local critique returned **FIX**, confirming mechanics but rejecting the unreadable fence opening and bare, visually unbounded slab. No map promotion followed. The same managed queue restores the proven candidate for three small local presentation edits (asphalt material, decorative fence opening, original-mesh outer walls), with unchanged physical inputs and full requalification. Do not convert the successful physics repair into a visual PASS. [Independent visual verdict](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/1daecb9/diagnostics/map-2026-10-06/rival-repair-visual-fix.json).
+
 ## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate
