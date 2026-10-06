@@ -214,6 +214,14 @@ visible limits and next measurable action. Launch success alone does not prove
 continued liveness. Deliver it through the actual parent/user reporting route;
 commentary in a child workspace is not guaranteed to reach oversight.
 
+Shared-slot waiting must release the capacity the waiter needs. During a
+resident-to-engine handoff, preserve the identity-checked handoff while the
+resident yields; handle only explicit queue/holder/occupied-slot responses as
+bounded admission waits. Waiting before that yield can leave an idle resident
+holding both slots. Never turn an exception from the already-running engine
+body into an admission retry, or remove another owner's queue records. N48
+records a native-tested recovery with the original failed attempt preserved.
+
 ## Advance the game, not only the test suite
 
 Maintain separate ledgers for engineering readiness and product scope. In the
