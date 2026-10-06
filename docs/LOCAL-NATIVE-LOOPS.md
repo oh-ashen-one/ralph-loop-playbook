@@ -33,6 +33,15 @@ and what will independently establish success. Include call sites and object
 creation, not just the file with the symptom. Report omission explicitly;
 never let a large-file filter conceal required code.
 
+List exact permitted project-relative paths in both the prompt and tool schema.
+For a small fixed set, use an enum and return those choices in validation errors.
+Do not make the author guess directories from a basename or an omitted inventory.
+If a complete tool submission was rejected solely by a diagnosed interface
+constraint, preserve its original hash and recover only that reviewed action
+through an exact destination mapping. Never infer paths broadly, overwrite an
+existing file, reuse placeholder probes, or extract code from private reasoning.
+The recovered source still requires integration, native gates and fresh review.
+
 Example editor request (fill placeholders with verified facts):
 
 > At candidate `<commit>`, native compilation reports `<first causal error>`.
