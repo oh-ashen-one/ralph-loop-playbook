@@ -187,9 +187,18 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Prevention/status:** exact state, symbol-specific compiler filter and sealed replay checks are **implemented/tested** for this recovery. Always include referenced declarations or explicit existing APIs as a **procedure**. No general static C# type checker before native compile is claimed.
 - **Evidence:** [one-reference compiler recovery](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/1b92489f24bc877b724d694b252278b158954e58/tools/resume_map_support_compile.py), [preserved-budget tests](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/1b92489f24bc877b724d694b252278b158954e58/tests/test_map_support.py).
 
-## Recording future incidents
-
 **N18/N19 follow-up, 06:09 UTC:** the one-line local correction compiled as **`bd0187d4`**. Native q0067 then proved the revised walking roundtrip (return **15.97 s**, **188/188** covered samples) and stable vehicle support (rootY **−0.01523..−0.00999**), with nine captures. The old driving timings failed under corrected grounded physics: X remained **1.47..3.36**, Z **7.96..9.46**, so no required outside excursion occurred. This fixes the studied support/compiler faults, not map acceptance. The exact blocking collider/heading behavior still needs diagnosis. The three-strategy budget closed with preserved counters 15/1 and restored accepted source; no regressions/fresh critic ran. A timestamped parent handoff and two actual private Library images report the exhausted blocker. Source edits that change physics require remeasuring input timing; an earlier successful trajectory cannot substitute for current-source execution.
+
+## N20 — A moving actor implemented as an immovable collider
+
+- **Symptom:** the grounded car could not leave X1.47..3.36/Z7.96..9.46 despite throttle and steering. A previous floating route had hidden the obstruction.
+- **Cause status:** verified by native q0069 using unchanged source/replay and passive collision callbacks. Ten samples show contact with the Rival's solid capsule, which has no Rigidbody. At t22.70 actual displacement speed was **0.414 m/s** versus commanded **4.5 m/s**, with an opposing contact impulse. The later steering interval also contacts the pier base after the approach was blocked. This establishes an actor-physics defect rather than missing input; it does not prove every part of the remaining route is valid.
+- **Failed approaches:** infer the cause from displacement alone; adjust later driving timings; read Rigidbody velocity after the game overwrites it and mistake that command for actual travel.
+- **Repair/outcome:** local Qwen saved **`d5260465`**, adding an 80 kg dynamic, gravity-enabled upright rival body and clearing its motion on the legitimate R reset. Solid collider, combat signals and the exact failed replay remain unchanged. At 06:22:45 UTC the sole owner was building that candidate; native acceptance was pending.
+- **Prevention/status:** passive contact names/bounds/normals/impulses, actual yaw/input, position-delta motion and the cause-specific repair gate are **implemented/tested** (197 CPU tests on both Macs). The first probe itself failed compilation because this Unity version rejects `GetInstanceID()`; retaining Collider references repaired that cloud-authored instrumentation error. Native q0069 proved the corrected probe runs. A general actor-physics linter is **not implemented**.
+- **Evidence:** [actual contact diagnosis](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/cf3b380/diagnostics/map-2026-10-06/static-rival-contact-diagnosis.json), [passive probe](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/a03089a1cdbf931dc5bfb1d45c2b008deffae84d/controller/unity/LoopVehicleObservation.cs), [cause-gated local repair](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/a03089a1cdbf931dc5bfb1d45c2b008deffae84d/tools/resume_vehicle_contact.py).
+
+## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate
 hypotheses; approaches actually attempted; effective repair and its measured
