@@ -286,6 +286,8 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Prevention/status:** exact-state/no-edit evidence guards and the bounded insertion are **implemented/tested**. Smaller task decomposition is a **procedure**, not a guarantee of future model completion. A saved local guard and wall-fixture PASS do not prove improved ordinary driving imagery or unchanged aim behavior; both still require native verification.
 - **Evidence:** [micro-recovery](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/3c5418c/tools/resume_street_camera_micro.py), [guard tests](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/3c5418c/tests/test_street_readability.py), [local camera source](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/0af5787bc2a1e57ff5e17bd2d0b984069a659380/game/Assets/Game/Bootstrap.cs).
 
+**N29 native outcome, 10:50 UTC:** `0af5787` passes the ordinary street replay as well as wall fixtures, but its return image is byte-identical to the earlier `b651a9f` image and its camera position/direction are exactly unchanged. The guard saved successfully but did not correct the observed return view. No duplicate image was delivered or visual improvement claimed. See [unchanged-pixel and pose proof](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/dacf766/diagnostics/map-2026-10-06/camera-bounds-no-visual-change.json). The next authorized step measures actual branch execution and dynamic car/camera bounds before another local edit, instead of assuming camera-body intersection from a close-looking image.
+
 ## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate
