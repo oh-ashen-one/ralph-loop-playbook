@@ -52,6 +52,8 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Prevention/status:** response/proposal hashes and one-time state validation are **implemented**. Inspect the complete proposal, preserve provenance, and retest resulting source; do not use private reasoning as fallback code.
 - **Evidence:** [pavement recovery implementation][pavement], [map chronology][map].
 
+**Repeat, 06:47 UTC:** q0071 submitted a complete 16-line, 789-byte entrance edit against a 14-line ceiling after saving matching asphalt. Controller [51de56b](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/51de56b0c27e7683fe43119724d08b86125f97f2/tools/resume_alley_completed.py) pins both response and exact tool content, preserves the saved asphalt, and accepts only that proposal within 18 lines. It saved `9587c2d3` without regenerating or modifying local gameplay content, then entered the separate local wall-edit request. All 199 CPU tests pass on both hosts. New scenery remains pending native requalification; the prior candidate passed all ten regressions but received visual **FIX**. The repeated incident supports leaving modest formatting headroom in bounded edit requests, not disabling size checks or accepting truncated output.
+
 ## N05 — Correct lookup intent, incomplete controller-selected span
 
 - **Symptom:** q0055 replaced a pavement lookup, but q0056 could not compile the resulting WorldColliders file. The old search tail and closing brace remained.
