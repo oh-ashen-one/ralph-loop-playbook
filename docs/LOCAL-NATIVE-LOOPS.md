@@ -48,6 +48,15 @@ stationary startup, bounded duration and capture times. State the physical
 outcome, not invented coordinates supposedly achieved. Separate syntax
 validation from real engine execution. A timing proposal is not a playthrough.
 
+When a multi-part replay keeps exhausting output, preserve a native-observed
+successful prefix and narrow the failing suffix to a few explicit fields.
+For example, one tested recovery requested three numeric axis-travel durations
+instead of another whole-route plan. The manager supplied the measured-clear
+waypoints; local Qwen supplied durations; the controller composed ordinary
+inputs; native traces proved return and boarding. Disclose that division of
+work. The small arithmetic response is not itself evidence of physical success,
+and a working walking prefix does not validate the driving suffix. See N17.
+
 For a visual critic, provide candidate/build/capture identity, actual frame
 times, current bounded target, accepted constraints and known limitations.
 Request three to five prioritized visible defects and a concise verdict.
