@@ -189,6 +189,8 @@ the conclusions. Scope is this run, not a universal model capability claim.
 
 ## Recording future incidents
 
+**N18/N19 follow-up, 06:09 UTC:** the one-line local correction compiled as **`bd0187d4`**. Native q0067 then proved the revised walking roundtrip (return **15.97 s**, **188/188** covered samples) and stable vehicle support (rootY **−0.01523..−0.00999**), with nine captures. The old driving timings failed under corrected grounded physics: X remained **1.47..3.36**, Z **7.96..9.46**, so no required outside excursion occurred. This fixes the studied support/compiler faults, not map acceptance. The exact blocking collider/heading behavior still needs diagnosis. The three-strategy budget closed with preserved counters 15/1 and restored accepted source; no regressions/fresh critic ran. A timestamped parent handoff and two actual private Library images report the exhausted blocker. Source edits that change physics require remeasuring input timing; an earlier successful trajectory cannot substitute for current-source execution.
+
 Record: timestamp and scope; observed symptom; proven cause and separate
 hypotheses; approaches actually attempted; effective repair and its measured
 outcome level; pinned evidence; prevention status and meaningful regression
