@@ -41,6 +41,8 @@ the conclusions. Scope is this run, not a universal model capability claim.
 
 **Follow-up, 05:11 UTC:** q0058's combined geometry/complete-route role also stopped at 8,192 output tokens (17,151 prompt tokens, 207.91 s, zero tool calls). No native attempt or changed strategy was submitted. The explicit blocker route worked, but the combined request did not. The next bounded approach separates a short walking/boarding prefix, native proof of that prefix, and a local driving suffix that cannot rewrite the verified inputs. Controller [73fc41f](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/73fc41fc20d1937ca999b95ba1a298f5c34e0f8d/tools/resume_map_walk_first.py) has 183 passing CPU tests on both hosts. This is a changed task shape under validation, not a proven cure for output exhaustion or an accepted map.
 
+**Follow-up, 05:21 UTC:** the compact q0059 walking role reduced prompt size to 4,834 tokens but still exhausted 8,192 output tokens after 200.37 s without a tool call. Smaller context alone therefore did not resolve this failure. One exact-state recovery [b8c5d1a](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/b8c5d1a205b10dbbf2a85c2e681d48af613cf3e8/tools/resume_map_prefix_budget.py) keeps the compact task, allows 16,384 output tokens and a bounded 700-second request, and preserves the original stops. All 184 CPU tests pass on both hosts. The larger allowance is pending native qualification; no claim of effectiveness or new map footage follows from its launch.
+
 ## N04 — Complete proposal rejected by a line ceiling
 
 - **Symptom:** q0054 emitted one complete 47-line, 3,041-byte pavement tool call against a 45-line cap.
