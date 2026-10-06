@@ -224,6 +224,14 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Prevention/status:** actual import/instance parity checks and red fixtures for tiny/rotated clones, missing colliders and floating placement are **implemented/tested**. Pixel review still determines visual quality; numerical parity alone does not establish useful scenery.
 - **Evidence:** [actual failed clone bounds and capture hashes](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/25f2b10/diagnostics/map-2026-10-06/alley-lighting-native-pass.json), [native clone checks](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/75eb0866eedbd6be27ee4fcd34ccf20708f308c0/tools/loop_controller/prop_clone_checks.py), [local repair controller](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/75eb0866eedbd6be27ee4fcd34ccf20708f308c0/tools/resume_alley_prop_transforms.py).
 
+## N23 — Reviewing sealed evidence must not change its manifest
+
+- **Symptom:** the bounded q0075 critic completes a real FIX, then the recovery stops with `Evidence manifest changed` before local game edits.
+- **Cause status:** verified controller bug. The review method resealed the same capture directory, changing `sealed_utc`; the surrounding recovery then checked the prior manifest hash. All17 observation-file hashes verified, and the new seal time matched review start. The original context stop and completed review were preserved.
+- **Repair/outcome:** [5e0fa48](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/5e0fa48a3f114bb0fa6879a0bdc47d07d62099f0/tools/continue_game_queue.py) reuses an existing seal only after verifying its bytes, candidate and scope. New evidence is sealed once. Changed observation bytes still halt. A one-time continuation pins the inspected manifest and complete critic hashes and does not repeat inference or reuse reasoning as code. All209 CPU tests pass on both hosts; the local prop/detail queue resumed at07:54:50UTC.
+- **Prevention/status:** immutable-manifest reuse plus tests for changed pixels and wrong candidate/scope are **implemented/tested**. A generic manifest-change stop is never dismissed as metadata-only without diagnosing the write and checking actual records. The gameplay repair outcome remains pending.
+- **Evidence:** [hash-pinned continuation](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/5e0fa48a3f114bb0fa6879a0bdc47d07d62099f0/tools/resume_prop_completed_review.py), [seal and recovery tests](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/5e0fa48a3f114bb0fa6879a0bdc47d07d62099f0/tests/test_prop_clone_checks.py).
+
 ## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate
