@@ -224,6 +224,21 @@ records a native-tested recovery with the original failed attempt preserved.
 
 ## Advance the game, not only the test suite
 
+For visual work, require actual target and current native image bytes in the
+request, not merely filenames in the prose. Record hashes/counts at the API
+boundary. Include all supplied art-direction targets in a separate broad
+visual review while using the most relevant targets for focused authoring.
+The studied N52 implementation enforces this packet, distinct visual verdicts,
+and larger bounded substantive-output allowances. A mechanical PASS cannot
+waive primitive anatomy, unreadable aiming or unfinished scenery. New code for
+these safeguards is not itself evidence that the visual improvement succeeded.
+
+For explicitly authorized shared coexistence, measure actual available locks
+and resource pressure end-to-end. An upper coexistence flag is ineffective if
+the lower helper still treats every holder record or open application as a
+global veto. N50 implements one free capture-slot acquisition while preserving
+exclusive performance locks, pause/resource checks and foreign ownership.
+
 Maintain separate ledgers for engineering readiness and product scope. In the
 studied run, the accepted map was a **7 × 32 m** corridor: 224 m² gross before
 obstacles. Decorative bounds and a 400 × 400 m invisible ground collider did
