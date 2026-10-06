@@ -352,6 +352,15 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Repair/status:** the same [measured continuation](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/515842a/diagnostics/map-2026-10-06/chapter-presentation-measured-fix.json) requests a local replacement of that expression with `aPos.y - agg.min.y`, plus correction of its comment. No anchor/physics/mesh/input change is authorized. Original failed source and native evidence remain preserved; native repaired grounding is pending.
 - **Prevention/status:** distinguish world target coordinates from relative offsets, and independently observe the complete rendered object's center, minimum height and extents. A stable objective root does not establish that its mesh is aligned or grounded.
 
+- **N36/N37 measured outcome, 14:21:57 UTC:** repaired source `c53cb5d` passed the unchanged chapter, live4:3 and captured16:9 panel checks across185active samples, cache baseY0.14/one emissive accent,20reset samples, all ten regressions and fresh scoped presentation criticism. The original failed source/proof and complete source-submission recoveries remain preserved. [Qualified outcome](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/42871c8/diagnostics/map-2026-10-06/presentation-qualified-next-ground.json). Full-game acceptance remains false.
+
+## N38 — A plausible mission proposal still needs actual API and state review
+
+- **Symptom:** the saved next-mission plan invents an `AlleyRetrievalArmed` hook and new legacy signals, proposes RouteStage>=3, writes the legacy mission to failed, requests primitive assets despite original-mesh reuse, and claims no existing source edit despite needing installation. Its surface proposal also places a road below existing pavement, and its unmeasured phase arithmetic is inconsistent.
+- **Cause status:** verified proposal/source mismatch before implementation. This is planning output, not observed gameplay or evidence that a new mission exists.
+- **Disposition:** preserve the full proposal and label its conflicts. Implement the independently scoped physical ground task with original meshes, existingY0.14road, matching6cm sidewalk/curb colliders and actual walkover proof. Then require local Qwen to revise the next gameplay design against current source: additive component-owned state, explicit installation, unchanged old chapter signals and separate red/positive acceptance.
+- **Prevention/status:** [42871c8](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/42871c8/tools/resume_street_ground.py) stages this continuation;283 CPU tests pass on both hosts. The new ground and corrected mission plan are pending at this entry. External curb walkovers do not count as new playable mission duration. Honest topology/pacing limits survive revision; invented hooks and estimates do not become facts through publication.
+
 ## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate
