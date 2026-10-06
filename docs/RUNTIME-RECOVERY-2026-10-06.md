@@ -168,3 +168,46 @@ blindly: its runtime prerelease, request methodology, thinking mode and wired
 memory setting differed. This recovery used official stable dependencies and
 existing authorized memory settings. Root-cause hypotheses remain separate
 from the measured benefit of the official update.
+
+## Subsequent integration evidence, 23:21 UTC
+
+Restored decode speed did not remove other failure modes. Two later resident
+stops measured available memory below the unchanged64GiB floor, with no swap
+growth. The game now deliberately separates authoring and native validation:
+stop only the idle owned model before native work, preserve shared admission,
+and reload deliberately only after measured headroom returns. The native-only
+controller retains the original memory/swap/thermal/ownership guards and an
+exclusive reservation of the inference port. No automatic restart loop is
+implemented. A temporarily unavailable port after graceful unload was preserved
+as a pre-engine interruption; recovery followed a successful exclusive bind.
+
+The owner now requires high reasoning for substantive integration. Actual
+reticle request receipts verify supported `xhigh`, thinking preservation and
+the supplied reference/native image hashes. An8192-token high-effort response
+and a separate16384-token shader response each reached their output caps without
+saving. Retaining the exact private local work, rather than repeating the fresh
+request, produced complete submissions in22.98and30.91seconds. Neither response
+was parsed for partial code, and reasoning was not published. This is a measured
+recovery technique, not evidence that larger budgets always solve non-delivery.
+
+The first complete reticle submission still used nonexistent Unity GL methods.
+Installed API documentation caught that incompatibility before an engine run.
+The final local-authored C#/shader candidate compiled and visibly drew the
+center reticle in both a normal player framebuffer and an explicit
+`Camera.Render` target. It also passed the current-source95-second route and
+camera-clearance check. Comments claiming capture support and a green gameplay
+gate had not established that visible requirement. Give the local author actual
+API context and enough permitted source scope to implement the dependency; an
+existing-shader-only restriction had been too narrow here.
+
+Capture UTC now records actual PNG-write completion in the native harness.
+Keep that distinct from a render exposure timestamp, file-copy mtime and Library
+upload time. When the supported prepared-upload route reported unavailable,
+the explicitly authorized direct Library create route succeeded; returned file
+identities and metadata were applied without altering PNG bytes. This observed
+fallback is not a claim that all installations expose both routes.
+
+See the [source-linked integration audit and remaining findings](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/352de31/docs/INTEGRATION-AUDIT-2026-10-06.md).
+The segmented character, missing demonstrated rig/animation, chapter death
+gating, material lifetime and HUD-state issues are not resolved by the reticle
+pass. Native zero-health diagnostics are running before the next local repair.
