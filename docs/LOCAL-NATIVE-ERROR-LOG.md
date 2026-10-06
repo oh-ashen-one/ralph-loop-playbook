@@ -327,12 +327,16 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Repair/status at13:08 UTC:** [798b2cb](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/798b2cb/tools/continue_game_queue.py) prevents the overwrite and adds a dispatcher regression. Actual chapter captures now include activation, nearest driving approach, on-foot approach, chapter completion and reset. Explicit evidence separates legacy anchor `(1,0.15,26)` from new cache `(50,0.14,18)`. The original FIX is preserved; the corrected review is pending, and genuine HUD/marker/camera quality gaps remain open.
 - **Prevention/status:** verify the final evidence delivered to each role, including filenames, capture times, state and scope. Test composition/dispatch, not only a selection helper. [Sanitized measured diagnosis](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/798b2cb/diagnostics/map-2026-10-06/chapter-review-routing.json).
 
+- **Measured follow-up, 13:10:56 UTC:** the corrected q0100 critic returned scoped PASS on unchanged `3f5a0ef`, agreeing with the live distance, actual on-foot approach, chapter completion and reset. HUD/marker/camera findings remain open. [Corrected verdict](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/1000497/diagnostics/map-2026-10-06/chapter-corrected-review.json).
+
 ## N35 — An added proof image exceeded bounded critic context
 
 - **Symptom:** q0099's corrected chapter critic stopped before inference. There was no request history, generated response or game edit.
 - **Proven cause:** five actual chapter frames plus the art reference produced a conservative prompt bound58,849; adding8,192 output tokens exceeded the65,536 working-context budget. The unchanged admission guard correctly rejected it.
 - **Repair/status:** [b003752](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/b003752/tools/resume_chapter_review_context.py) preserves the rejection and separates role evidence: five actual frames for chapter mechanics/presentation without the style reference; four chapter frames plus that reference for the following facade-art review. No context/output limit was raised, and reset remains a mandatory native contract even when omitted from the narrow facade critic's image set. All270 CPU tests pass on both hosts. Same queue resumed at13:08:13 UTC; actual fresh-review outcome remains pending.
 - **Prevention/status:** budget the final assembled prompt, including image count, framing reserve and output allowance, before opening a role. A context admission rejection is not a model-generated verdict or substantive gameplay failure.
+
+- **Measured follow-up, 13:26:02 UTC:** both bounded critic roles completed: the corrected short chapter passed, then local facade source `d7b2153` passed the unchanged native chapter, all ten regressions and a fresh facade-only review. Original failures were not erased and full-game acceptance remains false. [Facade scope result](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/56841d3/diagnostics/map-2026-10-06/east-street-facade-qualified.json).
 
 ## Recording future incidents
 
