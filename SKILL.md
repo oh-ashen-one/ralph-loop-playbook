@@ -1,164 +1,144 @@
 ---
 name: ralph-loop-playbook
 description: >
-  Run autonomous "ralph" coding loops where a small LOCAL model (27B-class,
-  e.g. Qwen via LM Studio) builds complete software — especially games — for
-  hours without human input, without producing slop. Use when: "ralph loop",
-  "run ralph", "overnight loop", "local model builds the project", "PRD
-  stories", "autonomous game build", "loop is stuck/rutting", "set up a
-  prd.json loop", "small model can't tool-call", or when managing, debugging,
-  or supervising an already-running loop. Covers the loop harness, story
-  authoring, the manager/overseer tier, asset sourcing, anti-slop design
-  bibles, and an 81-entry failure catalog.
+  Set up, supervise, diagnose, and hand off local-model coding loops,
+  especially native game projects. Use for Ralph loops, overnight local
+  builds, small-model editing failures, stuck stories, native acceptance,
+  rendered gameplay review, and evidence-based loop management. Covers
+  bounded prompts and tools, context and output budgets, Blender export
+  parity, protected acceptance, immutable checkpoints, single ownership,
+  provenance, and both the legacy FILE-block harness and qualified native
+  tool controllers. Read the linked incident log for observed failures,
+  effective repairs, and controls that remain recommendations.
 ---
 
 # Ralph Loop Playbook
 
-A ralph loop spawns a **fresh model instance per iteration** against a
-`prd.json` of small stories, each with a **mechanical verify command** that
-alone decides pass/fail. The model writes 100% of app code; the harness
-enforces what may be written; git is the memory; a manager (human, frontier
-agent, or the automated overseer) writes specs and unsticks ruts but never
-writes app code. This playbook is distilled from running five real projects
-to completion this way. Every rule below was paid for in burned GPU-hours —
-the receipt is in `FAILURES.md`.
+Run a sequence of small local-model tasks with fresh role contexts,
+controlled writes, independent acceptance, and Git-backed evidence. A fresh
+context does **not** require restarting or reloading a healthy model.
+Distinguish saved source, native behavior, accepted subfeatures, and the
+finished product. None implies the next.
 
-## When to use a ralph loop
+## Establish the active contract first
 
-Use it when the work decomposes into many small, mechanically-verifiable
-stories (games, web apps, tools) and you want hours of unattended progress
-from a cheap local model. Do NOT use it when: the verify can't be scripted
-(pure taste work), the task is one big irreducible design decision, or you
-can just use a frontier agent directly — the loop's whole economics are
-"free local tokens + expensive harness honesty". A loop is only as strong as
-its judge: pick stacks where the headless verify is excellent
-(`docs/ENGINES.md` ranks them).
+Read the current owner directive, repository instructions, live state,
+accepted checkpoint, failed candidate, pending action, and deadline before
+acting. Reconcile these after context compaction or a handoff. Completed
+cleanup, retired model preparation, and old start requests are history;
+they are not new work. A historical failure counter belongs to its recorded
+run. Preserve it rather than resetting or applying it to another campaign.
 
-## The core loop (what the harness does and why)
+Honor the owner's current authorization, authorship and asset policy.
+This skill grants no new authority to start compute, install tools, change
+models, delete data, spend money, launch duplicate owners, or merge main.
+Do not ask again for routine actions already authorized. A legacy suggestion
+to use downloaded assets or cloud rescue code cannot override a run that
+requires original local-Qwen Blender assets and local gameplay authorship.
 
-1. **Chat completions + `### FILE:` extraction — never tool-calling.** Small
-   models can't tool-call reliably. The model streams a reply containing
-   `### FILE: path` blocks (whole files) and/or `### PATCH:` blocks
-   (exact-match search/replace); the harness parses and writes them. State in
-   the story text: "you have NO tools; your reply is written straight to
-   disk" — stacked thinking-suppressors flip the chat template into
-   tool-call XML mode (FAILURES #28, #34).
-2. **Thinking ON, always.** `reasoning_effort: xhigh`,
-   `enable_thinking`/`preserve_thinking: true`, NO assistant prefill, no
-   suppressor. Suppressing reasoning caused a three-day, all-projects
-   quality collapse (FAILURES #42). If files hide in `reasoning_content`,
-   fall back to it — don't amputate it. A 30-minute think is NORMAL; chat
-   timeout 5400s; never kill a long think (#46).
-3. **The ~180-line emission limit is an architecture forcing function.**
-   Whole-file emission truncates past ~180-200 lines — attention, not
-   tokens. Don't fight it: mandate module splits in stories (you wanted the
-   modularity anyway), and use `### PATCH:` blocks for surgery on big files
-   (prerequisite: the target pinned verbatim in the snapshot, or every patch
-   is a paraphrase that never applies — #27).
-4. **Write-fences in the harness, not the prompt.** Prompts are requests;
-   the harness is law. Per-story `allowedFiles` (hard write whitelist) +
-   `protect` (required-symbol maps, derived by GREPPING the current file,
-   never from convention — #29) + harness-path protection (`tools/`,
-   `scripts/` never writable) + incomplete-last-file skip + planning-prose
-   filter. Fresh instances re-derive the world from priors and WILL rewrite
-   good files into imagined versions (law 5).
-5. **The verify command is the product spec.** Exit codes are never the
-   gate (Godot/GUT/Unity all exit 0 on failures — grep output markers, #23,
-   #52). Behavioral gates beat greps: click-throughs, input simulation,
-   headless sims with measured numbers (laws 9, 12; #36, #44, #49).
-   Red-test every gate: a gate you've never seen fail doesn't work (#56).
-6. **Typed exit codes** route the supervisor: 0 normal · 42 all-passed (or
-   phase-complete in the phased runner — park for a human checkpoint) ·
-   43 everything remaining blocked (escalate) · 44 zero-file format-failure
-   streak (continue) · 143 = deliberate manager kill, respawn without
-   burning the restart ladder (#73).
-7. **`regressionVerify`** (top-level prd command) runs after a story's own
-   verify passes, before the pass is banked — the fix-A-break-B killer.
-   Plus a force-moved git tag `last-known-green` after every
-   regression-green commit, so any corruption can be evaluated against a
-   PROVEN-green baseline.
-8. **Architect two-pass** at 3 consecutive failures: call A emits only a
-   numbered diagnosis/plan (no blocks), call B gets the plan prepended and
-   emits only blocks. Diagnosis and emission stop competing for one reply.
+## Select the matching harness profile
 
-## The three roles — never blur them
+- **Qualified tool controller / native game:** read
+  [Local Native Loops](docs/LOCAL-NATIVE-LOOPS.md) and the relevant cases in
+  [Local Native Error Log](docs/LOCAL-NATIVE-ERROR-LOG.md). Use this profile
+  for a controller whose typed tools, exact reads, write fences and native
+  gates have been tested. The October 2026 evidence uses this profile.
+- **Legacy FILE-block runner:** use `reference/`, [Harness](docs/HARNESS.md),
+  [Prompts](docs/PROMPTS.md), and [Playbook](docs/PLAYBOOK.md) only when that
+  stack is actually selected. Its `### FILE:` / `### PATCH:` formats,
+  `prd.json`, exit codes and model presets are stack-specific. Inspect all
+  helper write paths and run a fenced dry iteration before reuse. If using
+  that runner, preserve its required helper bundle; do not silently copy
+  an incomplete subset. Do not replace an already qualified controller.
 
-- **The model** writes 100% of app code, even fixing its own bugs.
-- **The manager** writes PRDs, briefs, stories, verify commands, acceptance
-  tests, harness patches. Zero authored app lines — except law 13's 1%
-  rule: at 2 consecutive same-cause fails the manager may apply a minimal
-  proven fix (and encodes it as a FAILURES entry). Cap: 2 interventions per
-  story, then restructure the story, never nurse a third (law 14).
-- **The judge** is a shell command. Never an opinion, never the model
-  grading itself (self-scores run 4+ points high).
+This router and the native runbook supersede conflicting blanket advice
+in historical references for the native profile: "never tool-call", always
+use `xhigh`, recover source from `reasoning_content`, wait indefinitely,
+force-move the sole accepted tag, or let a manager author game fixes. Keep
+historical incidents as evidence, not universal launch instructions.
 
-## Where everything lives
+## Operate the loop
 
-- `FAILURES.md` — **the crown jewel**: 81 failures, symptom → root cause →
-  fix. Read it twice before launching anything.
-- `docs/PLAYBOOK.md` — loop anatomy, the 16 laws, phases.
-- `docs/HARNESS.md` — every runner defense and why it exists; model config
-  preset (8-bit MLX, ctx 262144, xhigh, temp 1.0 / top_p 0.95 / top_k 20,
-  max_tokens 65536).
-- `docs/MANAGER.md` — the manager seat as a runbook: starting a run,
-  handover checklist, the 20-min heartbeat, the 2-fail rule, finishing.
-- `docs/PROMPTS.md` — QWEN.md system rules, the story template (manager-
-  authored test excluded from allowedFiles, ≤2 emitted files/story), the rut
-  playbook in escalation order.
-- `docs/ENGINES.md` + `docs/TOOLING.md` — stack ranking by verify-
-  scriptability; GUT exit-code lies; Unity XML parsing; xcodegen for iOS;
-  Movie Maker mode for headless screenshots; MCP for the manager tier only.
-- `docs/OVERNIGHT.md` — the 50-point checklist before any 8-hour run.
-  `docs/PREMORTEM.md` — write your own before launch; promote hits to
-  FAILURES after.
-- `docs/STYLE.md` + `docs/DUSK-STYLE.md` + `docs/CRITIC.md` — the anti-slop
-  method: decide everything upstream in a design bible (exact hexes, type
-  rules, feel constants, a forbidden-defaults list), then a critique phase
-  with canonical screenshots, three lenses, and the provenance test
-  ("shipped or AI hobby output? list the tells"). Ship bar: no shot below
-  5/9.
-- `docs/ASSETS.md` — assets-first (law 16): CC0 sourcing map with scriptable
-  download recipes and the real license walls. Programmer art is never the
-  shipping target; enforced by `reference/preflight_assets.sh` which BLOCKS
-  loop launch until licensed art is on disk.
-- `docs/MODELING.md` — Blender constants-first method (real-world dimensions
-  as constants, primitives + bevel, verify after every stage, re-open the
-  GLB) for when nothing CC0 fits.
-- `docs/DEEPSEEK.md` — swapping the loop model (MLX serving gotchas, the
-  Metal 499000 resource crash, fork requirements).
-- `docs/OPS.md` — phase gates (loop physically cannot run ahead of a human
-  checkpoint), GPU slot law (max 2 loops/box, mechanical claims), watchdog
-  and pager patterns, the overnight scoreboard ritual.
-- `docs/GAUNTLET.md` — the arena build process this derives from (goal+bar,
-  builder vs fresh-context critic, blind A/B) and how a 27B loop implements
-  it honestly.
-- `reference/` — the battle-tested runners, supervisor, scaffold, Godot
-  verify wrappers, stuck detector, and prompt templates. Copy the WHOLE
-  directory into a project as `scripts/ralph/` — never cherry-pick (#69).
-- `quality/` — the law-17 production-quality contract layer: BRIEF template,
-  `contract.json` schema + preflight validator (blocks launch), quality
-  ledger, prd template with the seven quality story classes, red-spec stubs,
-  worked examples.
-- `overseer/` — the AI-manages-AI tier: read-only telemetry packet, a
-  JSON-action-only manager prompt, a dumb capped executor (2-intervention
-  cap it cannot be talked past), event-triggered check-ins, pluggable pager.
+1. **Define observable acceptance before editing.** Specify the smallest
+   useful behavior, actual player inputs, expected state transitions,
+   representative rendered captures, regressions, and remaining product
+   limits. Include deliberate red cases. Tests must detect broken behavior,
+   not merely the presence of symbols or success text.
+2. **Give the local author exact, bounded context.** Include the current
+   revision, real API/call site, selected source span and preimage, measured
+   failure, allowed edit, forbidden unrelated changes, and submission
+   schema. Check whether the requested scene/object is generated or loaded
+   elsewhere. Avoid another broad planning cycle for a diagnosed small fix.
+3. **Use mediated edits.** Validate the path, authorization, exact preimage,
+   schema, size and protected content before every mutation route. Prefer
+   one small edit or file at a time; save accepted edits between calls.
+   Never extract game code from private reasoning or incomplete output.
+4. **Budget explicitly.** Use the pinned tokenizer/chat template where
+   available; reserve output, tool and image space within the actual working
+   context. Record prompt/completion counts, finish reason, latency and
+   submitted actions. Keep thinking enabled when required, but measure
+   per-role effort and output settings. `low` is not a completion guarantee.
+5. **Classify a stop before retrying.** Distinguish tool-turn exhaustion,
+   output truncation, complete-but-invalid submission, rejected edit size,
+   engine failure and runtime/resource fault. Preserve the original stop
+   and counters. Change the diagnosed constraint once; do not retry the
+   same failure indefinitely or loosen physical acceptance to obtain green.
+6. **Validate real artifacts.** Match Blender scripts to regenerated exports,
+   import in the selected engine, compile, launch and replay actual inputs.
+   Inspect logs and evidence as well as exit codes. Require visible support,
+   collision, damage/miss/cover, mission failure/retry and representative
+   camera transitions where applicable. Headless success is not visual proof.
+7. **Promote only after independent gates.** Run relevant regressions and a
+   fresh visual critique of the same candidate/build. Ask the critic for
+   three to five prioritized, actionable defects. Keep acceptance outside
+   the author's writable scope. Store immutable accepted commit IDs and
+   evidence identities; a convenience "latest" pointer is not the record.
+8. **Measure product progress.** Report connected playable extent, actual
+   mission duration and meaningful objectives, visible quality, and known
+   defects beside test counts. Advance to the next measurable milestone.
+   Repeated camera, HUD or harness polish does not establish a larger game.
+9. **Preserve one owner and a finite run.** Check locks, PID liveness, model
+   health and current requests before resuming. Bound failures, resource
+   use and time according to the active contract. Never auto-extend the cap
+   or overwrite stop requests. Hand off the best accepted state and latest
+   failed source even when the final quality target was not reached.
 
-## The shortest path to a working loop
+## Keep roles and evidence clear
 
-1. Install LM Studio, load a 27B 8-bit at ctx 262144, CONFIRM `lms ps`
-   identifier→weights (#43). Set `QWEN_MODEL` to your identifier.
-2. `reference/scaffold_project.sh <root> <name> [2d|3d]` — full harness,
-   quality contract, red-spec stubs, launch-blocking preflights.
-3. Source art FIRST (`docs/ASSETS.md`), fill both asset manifests. The
-   preflight blocks until you do.
-4. Complete `QWEN.md`, `BRIEF.md`, `quality/contract.json`,
-   `QUALITY-LEDGER.md`. Write the prd: ≤15 stories, ≤2 emitted files each,
-   manager-authored test per story staged in `tests_staged/` and EXCLUDED
-   from allowedFiles.
-5. Red-test every gate; dry-run ONE iteration before any overnight launch.
-6. `RALPH_SLOTS_DIR=~/ralph-slots reference/run_loop.sh <name>` — then work
-   the heartbeat + 2-fail rule from `docs/MANAGER.md`, or put the loop under
-   `overseer/` management.
-7. Finish honestly: full suite + real-launch smoke + CRITIQUE PHASE
-   (mandatory — green tests without it is "functional", not done) + human
-   playtest. Publishing to any live service is ALWAYS a human decision.
+- **Local author:** substantive app/game code and any assets required by
+  the run's authorship policy. Use separate planner, editor, replay and
+  critic contexts as needed; keep model requests sequential when required.
+- **Manager/controller:** briefs, exact source retrieval, bounded scopes,
+  acceptance, orchestration, diagnosis and provenance. Cloud rescue code is
+  allowed only if the active contract authorizes it, and must be disclosed.
+- **Acceptance:** protected automated evidence plus independent rendered
+  review. A model's claim or score cannot override a failed native gate.
+
+Publish concise decisions, findings and sanitized receipts. Keep credentials,
+private paths, raw chat and hidden reasoning out of Git. Record local and
+cloud contributions separately. For each incident state the symptom,
+verified cause versus hypothesis, failed attempts, effective repair, evidence,
+and prevention status. Mark each guard as **implemented/tested**, **procedure**,
+**recommendation**, or **pending native validation**; do not describe a rule
+in a document as an enforced control.
+
+## Reference map
+
+- [Local Native Loops](docs/LOCAL-NATIVE-LOOPS.md): prompt examples, budgets,
+  source/export parity, physical and visual gates, recovery and scope metrics.
+- [Local Native Error Log](docs/LOCAL-NATIVE-ERROR-LOG.md): dated October 2026
+  cases with pinned evidence and explicit unresolved outcomes.
+- [Failure Catalog](FAILURES.md): 81 historical entries; some fixes were
+  later superseded. Follow the selected profile and current authorization.
+- [Manager](docs/MANAGER.md), [Overnight](docs/OVERNIGHT.md),
+  [Premortem](docs/PREMORTEM.md), [Ops](docs/OPS.md): legacy management patterns;
+  adapt cadence and limits to the actual owner and workload.
+- [Style](docs/STYLE.md), [Dusk Style](docs/DUSK-STYLE.md),
+  [Critic](docs/CRITIC.md), [Gauntlet](docs/GAUNTLET.md): visual briefs and review.
+- [Assets](docs/ASSETS.md), [Modeling](docs/MODELING.md): asset licenses and
+  Blender workflows, subject to the owner's sourcing policy.
+- [Engines](docs/ENGINES.md), [Tooling](docs/TOOLING.md),
+  [DeepSeek](docs/DEEPSEEK.md): historical stack-specific findings; verify
+  current versions before adopting configuration advice.
+- `quality/`: brief, contract and ledger templates. `overseer/`: bounded
+  manager actions. `reference/`: legacy harness source to audit before reuse.

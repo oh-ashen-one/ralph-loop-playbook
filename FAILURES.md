@@ -1,5 +1,7 @@
 # Failure Catalog
 
+**Historical cases:** these 81 entries preserve earlier findings and sometimes superseded repairs. For qualified native tool controllers, follow the current [skill profile](SKILL.md), [native runbook](docs/LOCAL-NATIVE-LOOPS.md), and [dated incident log](docs/LOCAL-NATIVE-ERROR-LOG.md). The newer log distinguishes verified causes, unsuccessful approaches, actual repairs and recommendations. Old presets or manager rescue policies do not override the current owner contract.
+
 Every failure mode we hit across five projects, with the fix. Ordered roughly
 by how much wall-clock each one burned before diagnosis.
 
