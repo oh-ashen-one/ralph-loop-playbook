@@ -338,6 +338,20 @@ the conclusions. Scope is this run, not a universal model capability claim.
 
 - **Measured follow-up, 13:26:02 UTC:** both bounded critic roles completed: the corrected short chapter passed, then local facade source `d7b2153` passed the unchanged native chapter, all ten regressions and a fresh facade-only review. Original failures were not erased and full-game acceptance remains false. [Facade scope result](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/56841d3/diagnostics/map-2026-10-06/east-street-facade-qualified.json).
 
+## N36 — Screenshot framing and the live gameplay viewport can disagree
+
+- **Symptom, 13:51 UTC:** q0103's compact HUD looks contained in960x540 native PNGs, yet the new live-viewport checks report offscreen/oversized panels. The source is published at `47e1b8a`; the real chapter still passes, but presentation qualification stops before regressions/criticism.
+- **Proven cause:** native screenshots temporarily attach a16:9 RenderTexture. Between captures the running camera uses a narrower viewport. Fixed camera-space panel positions based only on the screenshot can crop in the live game. The different coordinate systems must be identified; neither a pleasing PNG nor a mechanical PASS waives the live-view defect.
+- **Repair/status:** [515842a](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/515842a/tools/resume_measured_chapter_layout.py) keeps the existing live-panel limits and adds separately labeled capture-projection observations. Shared capture dimensions prevent drift. Local Qwen is asked to narrow/reposition panels and cache/restore the legacy receipt backing without changing gameplay camera, game progress or resolution. All278 CPU tests pass on both Macs; the measured local repair resumed at14:00:03 UTC and native qualification is pending.
+- **Prevention/status:** qualify both the actual interactive viewport and the exported render target. Preserve a failing live-view check when adding capture checks. Tests reject capture-only success, live-only success and missing projection metadata. Pixel review remains mandatory.
+
+## N37 — A world anchor already includes the pavement height
+
+- **Symptom:** the muted original cache mesh renders with baseY0.28 while its fixed anchor/pavement areY0.14. Chapter interaction and root-position checks pass because the root itself remains correct.
+- **Proven cause:** local styling code used `(aPos.y + 0.14f) - agg.min.y`; the anchor already includes0.14m, so the mesh received that height twice. Aggregate rendered bounds expose a defect that root-only observation misses.
+- **Repair/status:** the same [measured continuation](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/515842a/diagnostics/map-2026-10-06/chapter-presentation-measured-fix.json) requests a local replacement of that expression with `aPos.y - agg.min.y`, plus correction of its comment. No anchor/physics/mesh/input change is authorized. Original failed source and native evidence remain preserved; native repaired grounding is pending.
+- **Prevention/status:** distinguish world target coordinates from relative offsets, and independently observe the complete rendered object's center, minimum height and extents. A stable objective root does not establish that its mesh is aligned or grounded.
+
 ## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate
