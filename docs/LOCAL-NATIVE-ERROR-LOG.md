@@ -204,6 +204,15 @@ the conclusions. Scope is this run, not a universal model capability claim.
 
 **N20 qualification, 06:35 UTC:** all ten current-source regressions passed. Fresh local critique returned **FIX**, confirming mechanics but rejecting the unreadable fence opening and bare, visually unbounded slab. No map promotion followed. The same managed queue restores the proven candidate for three small local presentation edits (asphalt material, decorative fence opening, original-mesh outer walls), with unchanged physical inputs and full requalification. Do not convert the successful physics repair into a visual PASS. [Independent visual verdict](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/1daecb9/diagnostics/map-2026-10-06/rival-repair-visual-fix.json).
 
+## N21 — Physical enclosure without readable scenery or junction evidence
+
+- **Symptom:** q0072's matching asphalt and visible outer walls pass native out-and-back traversal and all ten regressions, but the fresh critic returns **FIX** at 07:00:47 UTC. Actual walking/driving frames show a dark, empty corner and a hard-to-see actor. The selected captures omit the boundary crossing itself.
+- **Cause status:** darkness, plain walls and absent junction frames are verified visual/evidence defects. The existing traces show the crossing is physically usable; this is not another failed driving trajectory. The exact best lighting/art treatment remains a design choice requiring fresh rendered review.
+- **Failed approach:** equate visible bounding meshes and physics passes with a readable alley; capture only the old corridor and distant outside positions while asking the critic to judge the junction.
+- **Repair/outcome:** controller [c1718b7](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/c1718b74eda86d5ff06aebd15f42f1a9d4a1602d/tools/resume_alley_readability.py) preserves the rejection and accepted baseline, requests three local visual edits, and adds actual trace-derived boundary capture times without changing physical inputs. Critic selection retains that junction, both distant excursions and the return. All 202 CPU tests pass on both hosts. At 07:18 UTC the local fill-light role is active; native visual improvement is **pending**, not established by controller tests.
+- **Prevention/status:** junction selection and input-preserving capture additions are **implemented/tested**. Reviewing actor/floor contrast and the visible route is a **procedure**, not an automatic pixel-quality metric. Keep a visual FIX separate from mechanical acceptance and preserve unfinished quality claims.
+- **Evidence:** [complete critic and regression receipts](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/c1718b74eda86d5ff06aebd15f42f1a9d4a1602d/diagnostics/map-2026-10-06/alley-readability-visual-fix.json), [capture/recovery tests](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/c1718b74eda86d5ff06aebd15f42f1a9d4a1602d/tests/test_alley_readability.py).
+
 ## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate
