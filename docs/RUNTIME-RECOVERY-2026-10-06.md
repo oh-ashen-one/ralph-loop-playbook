@@ -211,3 +211,15 @@ See the [source-linked integration audit and remaining findings](https://github.
 The segmented character, missing demonstrated rig/animation, chapter death
 gating, material lifetime and HUD-state issues are not resolved by the reticle
 pass. Native zero-health diagnostics are running before the next local repair.
+
+## Native boundary precision, October 7
+
+The six chapter death diagnostics subsequently reached valid live states and
+reproduced dead-player controls. One setup was initially rejected because Unity
+serialized float32 `59.6` as `59.599998474121094`, below the Python validator's
+decimal-double lower bound. Compare the native representable boundary, not an
+arbitrary wider tolerance. A regression must still reject an earlier frame and
+the missing required input. Preserve the original rejected gate and trace;
+record a separate hashed reconciliation and rerun only unfinished cases.
+This acceptance correction is not a gameplay repair. See the
+[six-case findings](https://github.com/oh-ashen-one/M5-Ultra-Qwen-3.8-Gaming-Loop/blob/3926414/docs/INTEGRATION-AUDIT-2026-10-06.md).
