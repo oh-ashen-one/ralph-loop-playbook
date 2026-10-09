@@ -359,6 +359,15 @@ but also an incomplete deck, empty city backdrop and absent character/car.
 Retain the critic's original judgment and separately attribute pixel-review
 disagreements; do not edit its meaning to fit the builder's explanation.
 
+Candidate 0009 repeated the nested-report syntax failure and remained a
+preserved, unrepaired parse failure. N66 records the changed fourteen-field
+flat critic contract, strict controller checks and candidate 0010's actual
+valid original JSON at the same effort/output/context settings. Readonly
+normalization changes report shape only. The follow-up still judged FIX,
+2/5 in every category, with incomplete surroundings and absent car/character.
+One successful format follow-up does not establish universal reliability,
+pixel grounding, motion or game acceptance.
+
 **Implemented/tested:** exact current-write byte gating, preserved failures,
 source-byte snapshots before native launch, source/build/capture/input linkage,
 owned cutoff/identity checks, and the qualification positive/negative fixture.
