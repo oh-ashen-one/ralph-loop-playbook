@@ -368,6 +368,13 @@ normalization changes report shape only. The follow-up still judged FIX,
 One successful format follow-up does not establish universal reliability,
 pixel grounding, motion or game acceptance.
 
+N67 records a later limitation: two High car tasks exhausted output without
+a write, while a changed primitive-only task saved exact source but failed
+Blender API and scale review. Saved bytes/sec and generation tokens/sec are
+not useful native-art throughput. Record loading and steady pressure separately,
+preserve rejected source, stop a bounded failing pattern, and keep inference
+unloaded during independent review. Correction remains pending.
+
 **Implemented/tested:** exact current-write byte gating, preserved failures,
 source-byte snapshots before native launch, source/build/capture/input linkage,
 owned cutoff/identity checks, and the qualification positive/negative fixture.

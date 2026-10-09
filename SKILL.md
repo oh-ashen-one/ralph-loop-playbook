@@ -131,7 +131,7 @@ in a document as an enforced control.
 
 
 For model-specific follow-ups, read the [GLM 5.3 Flash scope notes](docs/LOCAL-NATIVE-LOOPS.md#glm-53-flash-qualification-and-static-street-work)
-and incidents N58–N66. Preserve the earlier Qwen results as historical evidence.
+and incidents N58–N67. Preserve the earlier Qwen results as historical evidence.
 Name the exact model revision, quantization, runtime, reasoning options and test
 scope; a new model's fixture or scoped art recovery is not a matched benchmark.
 
