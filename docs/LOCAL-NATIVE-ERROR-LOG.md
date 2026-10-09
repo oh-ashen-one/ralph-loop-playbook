@@ -516,7 +516,7 @@ the conclusions. Scope is this run, not a universal model capability claim.
 
 ## N61 — GLM readiness fixture passed without establishing game motion
 
-- **Scope:** a separate six-second Unity/Metal diagnostic fixture used normal input, actual rendered frames and collision measurements. The positive run measured 2.654 m horizontal range and roughly 84.7 pixels of actor-centroid motion; the deliberately stationary run exercised the same motion detector's negative path.
+- **Scope:** a separate six-second Unity/Metal diagnostic fixture used normal input, actual rendered frames and collision measurements. The positive run measured 2.654 m full horizontal range (2.653977 m before rounding) and 2.625 m first-to-final horizontal displacement after wall contact, plus roughly 84.7 pixels of actor-centroid motion; the deliberately stationary run exercised the same motion detector's negative path.
 - **Outcome:** qualified native render/input/collision and stationary-negative checks passed at 00:08:42 UTC on October 9, before game work. Fixture art quality remained UNVERIFIED and FPS was NOT_MEASURED.
 - **Immutable identities:** fixture source tree `ea06f0b81d1ce1bb6d7f3b083feb020bde1802c34349752f92bcc747a58bdbf0`; build manifest `da51a5a4b8bccb940736a1d731ceb2d95922f68653cd8b0805aad5df5f80628a`.
 - **Prevention/status:** positive/negative detector qualification was **implemented/tested**. Subsequent street camera stills did not inherit player-motion, driving or gameplay acceptance. This is a new-model qualification case under N06/N09's existing principle.
