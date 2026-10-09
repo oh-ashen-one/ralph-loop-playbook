@@ -375,6 +375,31 @@ not useful native-art throughput. Record loading and steady pressure separately,
 preserve rejected source, stop a bounded failing pattern, and keep inference
 unloaded during independent review. Correction remains pending.
 
+N68 records a final-read reservation failure after a complete accepted write.
+The fixed builder reserve would exceed context even though only a hash read
+remained. A bounded read-only continuation was qualified on the actual failed
+history, then used in a later complete author session. It exposes no writes and
+requires an accepted current write plus matching model-requested read; the old
+failed session stays failed. No context or builder ceiling was increased.
+
+N69 preserves a later syntactically complete critic's extra-key schema failure.
+A fresh typed fourteen-field report submission passed one bounded qualification
+and strict negative checks without field dropping, score coercion or JSON
+repair. This qualifies that transport case, not universal reliability, actual
+visual grounding or the original failed report.
+
+N70 distinguishes an art-task geometry budget from machine capacity. The cloud
+orchestration owner set twelve new character meshes and 800 evaluated triangles
+for the initial bounded static-character silhouette exercise, to keep one model
+edit and its additive street audit small. It was retained by later character
+tasks. It is neither a measured hardware limit nor a quality standard. A later
+complete exact refinement generated 884 evaluated triangles and stopped at its
+unchanged assertion before export/render. Selective local-model bevel correction
+then measured 628 triangles in an independent saved-blend audit before export,
+followed by matched native captures and a valid typed FIX critique. Do not
+raise or delete an assertion to invent a pass. A future deliberate scope revision must state its purpose and obtain
+fresh geometry/render evidence. See the incident for dated outcomes.
+
 **Implemented/tested:** exact current-write byte gating, preserved failures,
 source-byte snapshots before native launch, source/build/capture/input linkage,
 owned cutoff/identity checks, and the qualification positive/negative fixture.
