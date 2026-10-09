@@ -287,3 +287,68 @@ deferred findings in later scoped receipts. Do not turn advancement to another
 task into a claim that the failed visual criterion passed. The studied N25
 continuation implements this exact transition; it does not excuse mechanical
 regressions or final presentation requirements.
+
+## GLM 5.3 Flash qualification and static street work
+
+**Different-model follow-up, October 8–9, 2026; ongoing experiment.** This
+extends the procedure, not Qwen's historical benchmark results. The author was
+`TensorFold/GLM-5.3-Flash-MLX-oQ4-MTP`, immutable revision
+`98725463185746ffaacb19f1327d1d6814a219f0`: 4-bit base weights with selected
+5/6/8-bit overrides, not full precision. Runtime: stock oMLX 0.7.0, MLX 0.32.2;
+MTP disabled. Engine scope: Blender 5.2.0 static FBX export and Unity
+6000.6.4f1 standalone Metal renders. Substantive game/art source was local-GLM
+authored; cloud contributions were orchestration, source/receipt validation and
+separately identified native-pixel critique.
+
+Model readiness required an isolated configuration view with two backbone
+schedules corrected from 46 entries to the official 45-entry schedules, while
+preserving the original weights and verified 35-shard manifest. This was a
+verified setup remedy, not permission to truncate arbitrary metadata. Check
+the pinned official configuration and test the selected runtime view before
+handoff. It does not establish game-building quality. See N58 and N56 for the
+distinction between metadata correction and the earlier Qwen runtime recovery.
+
+Supported efforts were low/high/max. Max length stops, a smaller Max task that
+saved imperfect source, and successful compact High requests were all observed.
+Task shape and effort changed together in parts of qualification; there was no
+controlled proof that High is universally superior. Broad High game-art tasks
+also exhausted 8,192 output tokens without saving a file. Use actual supported
+options, smaller complete tasks and useful-artifact receipts; retain length
+stops and never salvage unfinished reasoning. This adds a GLM case to N03/N54,
+not a new universal output-budget rule. Fresh visual critics used Max.
+
+The qualified file transport used nested `content.text` to preserve exact file
+bytes, including the terminal newline. Strict schema failures still occurred.
+The implemented save gate required a current accepted model write and matched
+decoded submitted text to reread bytes/hash; an existing file with no current
+write failed its negative check. Record a model-requested post-write read
+separately from an independent byte roundtrip. Candidate 0004/0005 reached their
+turn ceilings without the former, while the latter passed. Do not report one
+as the other. See N60.
+
+Readiness and product evidence stayed separate: a six-second diagnostic native
+positive and stationary-negative fixture qualified the motion detector; later
+street captures were camera inspection stills only. Their source/build/input
+bindings and real texture assignments passed, but no character, driving,
+combat, mission duration or frame-rate claim followed. N61 records this scope.
+
+Candidate 0003 technically bound its saved road texture but displayed square
+patches. The failed source/art/build/captures were preserved, and the previous
+native preview was restored. A GLM pixel-math correction removed the pattern
+in 0004; a separate 0005 pass added road paint and sidewalk seams. Fresh local
+critique and cloud native-pixel review supported those relative WIP improvements.
+The critic still returned **FIX** and **2/5 in each of architecture, surfaces,
+lighting and depth**. These are category scores, never an acceptance fraction
+or a count of successful candidates. No finished-art or playable-game acceptance
+was established. N62 retains the sanitized immutable identities.
+
+**Implemented/tested:** exact current-write byte gating, preserved failures,
+source-byte snapshots before native launch, source/build/capture/input linkage,
+owned cutoff/identity checks, and the qualification positive/negative fixture.
+These are controls in this GLM run, not automatically installed by reading this
+document. **Recommendations:** independently inspect imported texture/UV bindings
+and actual pixels; narrow visual regressions before expanding features; adapt
+resource admission to measured loading/steady pressure and protected workloads.
+**Hypotheses:** intrinsic model superiority or a universal best effort/output
+setting remain unproven. This is a lessons-informed comparison using the same
+reference targets and fresh source/assets, with changed historical conditions.

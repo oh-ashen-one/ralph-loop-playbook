@@ -490,6 +490,46 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Validation:** five relevant CPU tests passed on the M5; eight character/camera/recovery tests passed on the controller. Tests reject unrelated state/source/failure recovery and distinguish short, healthy, slow, changed-request and reset-counter observations. The new local character request started at 22:16:13 UTC and saved complete source after108.4 seconds, with7,822 output tokens at77.53 decode tok/s. Its first Blender export failed on nonexistent `Matrix.Euler`; source is preserved and a separate local API/transform repair follows. No native visual success is claimed.
 - **Limits:** low speed is a diagnosis trigger, not a proven cause. The absolute request bound still works when activity telemetry is missing. These controls bound each request; the fixed project cap, separate export/native deadlines and artifact acceptance remain necessary. Documentation is not a universal automatic preflight or a guarantee against recurrence.
 
+
+## N58 — GLM-specific metadata correction preserved immutable weights
+
+- **Scope/model:** October 8–9 GLM 5.3 Flash setup, exact model/runtime/quantization and MTP setting in the [GLM scope notes](LOCAL-NATIVE-LOOPS.md#glm-53-flash-qualification-and-static-street-work); distinct from Qwen N56.
+- **Verified remedy:** an isolated runtime configuration view replaced two erroneous 46-entry backbone schedules with the official 45-entry schedules. Original weights and the verified 35-shard manifest remained unchanged. Qualified handoff preceded game work.
+- **Limits:** setup readiness and short decode measurements were not coding, sustained performance or visual success. Do not infer that shortening a schedule is generally safe.
+- **Prevention/status:** the isolated view and bounded tool/native qualification were **implemented/tested** in this run. Checking a new model's pinned official metadata before applying such a correction is a **procedure**; automatic repair for other models is not claimed.
+- **Evidence identity:** model revision `98725463185746ffaacb19f1327d1d6814a219f0`, 185,769,351,828 verified downloaded bytes / 35 shards. Private setup records remain private.
+
+## N59 — GLM effort and task-size recovery was not a controlled superiority test
+
+- **Observed:** Max Blender qualification requests stopped at 8,192 output tokens without saved source. A smaller Max function did save source but needed a numeric correction. Compact supported High requests later saved Blender/game-art sources; broad High street-shell, combined facade/texture and elevated-L requests also hit length limits.
+- **Repair/outcome:** smaller complete street-shell source was saved at 00:24:11 UTC on October 9, SHA256 `8a388df4078781d8cdb22fa0c98d1686f7526b7e0b1d132c7328812ce0ed86e2`. Later exports/native previews had separate gates. The broad L request ended at 02:29:14 UTC without a file; its smaller core saved source that source review rejected before execution.
+- **Interpretation:** effort and task shape were confounded in qualification. High is not a completion guarantee; Max is not incapable of a small task. No unfinished/private reasoning was treated as source.
+- **Prevention/status:** supported-option forwarding and incomplete-output rejection were **implemented**; decomposition is a **procedure/recommendation**. This is additional model-specific evidence for N03/N54, not a duplicate budget policy or final art pass.
+
+## N60 — GLM file transport needed byte proof beyond a saved-file flag
+
+- **Observed/proven fix:** bare string-tool parsing lost the terminal newline. Qualified nested `content.text` transport preserved exact submitted text through write/read/hash checks with stock runtime. Malformed schemas continued to receive explicit rejections.
+- **Later boundary:** candidate 0004/0005 authors saved on their final allowed turns after schema rejections, without a final model-requested read. Independent decoded-content/reread/hash/LF verification passed; that distinction remained explicit.
+- **Implemented/tested guard:** require a current accepted model write matching saved bytes and a complete nested typed submission before recording useful saved output. A positive real submission passed; an existing file with an empty current-write list was rejected. This CPU guard does not by itself validate Blender or Unity.
+- **Evidence:** corrected asphalt source SHA256 `edaf0872ef14f5445d2fbae44f03c21c9d72650c181643a8b2096a06bf6dc2be`; paint source `ea365b2e98159db41c59ecfe3cdd5675297c24e666fbfed1a55919d2db8b826b`. N26/N30 remain the separate historical path/terminal-tool incidents.
+- **Recommendation:** preserve exact transport bytes and both kinds of readback; do not normalize file whitespace or accept an old file as a new edit.
+
+## N61 — GLM readiness fixture passed without establishing game motion
+
+- **Scope:** a separate six-second Unity/Metal diagnostic fixture used normal input, actual rendered frames and collision measurements. The positive run measured 2.654 m horizontal range and roughly 84.7 pixels of actor-centroid motion; the deliberately stationary run exercised the same motion detector's negative path.
+- **Outcome:** qualified native render/input/collision and stationary-negative checks passed at 00:08:42 UTC on October 9, before game work. Fixture art quality remained UNVERIFIED and FPS was NOT_MEASURED.
+- **Immutable identities:** fixture source tree `ea06f0b81d1ce1bb6d7f3b083feb020bde1802c34349752f92bcc747a58bdbf0`; build manifest `da51a5a4b8bccb940736a1d731ceb2d95922f68653cd8b0805aad5df5f80628a`.
+- **Prevention/status:** positive/negative detector qualification was **implemented/tested**. Subsequent street camera stills did not inherit player-motion, driving or gameplay acceptance. This is a new-model qualification case under N06/N09's existing principle.
+
+## N62 — A bound GLM texture rendered poorly; scoped visual recovery stayed WIP
+
+- **Observed:** candidate 0003 imported a real saved asphalt PNG with a neutral tint, passed native source/build/input/capture checks, then showed conspicuous square road patches. Technical texture-binding success did not predict its appearance.
+- **Recovery:** rejected source/art/build/captures were preserved; candidate 0002's verified native preview was restored. GLM-only pixel-math correction 0004 removed the pattern; separate original paint/seam layer 0005 improved street readability. Geometry/lighting were not cloud-replaced. N13 supplies the existing immutable rollback principle.
+- **Independent outcome:** fresh local Max pixel critique remained FIX; 0005 scored **2/5 in each** of architecture, surfaces, lighting and depth. Cloud actual-native-pixel review accepted only the relative asphalt/paint improvements. No finished art, ten-minute playability, player motion or FPS acceptance followed.
+- **Sanitized immutable identities:** rejected 0003 source tree `0b6db132d6f9cd7e43255029160d4d2db33cda2ec153f44518bb3cfa89976c6d` / build manifest `76f0b7dd8ba91e03c9f1e58aeb52283ed9052548538c20bcb5af715e68aadc58`. WIP 0005 source tree `1b81fd0ea0d9976d16a07758d06d025c19c75fd96d1f94d12e6f5ae17f1b925f` / build manifest `05e6f2bb177555889619978ec72d8928b5b141bad82e02a50083caba026a61ac`; native street-eye PNG SHA256 `59726a098073c299263f5036d04984c019de8e5d592db838162a2f9ea083290b`, captured 02:19:24.354822 UTC.
+- **Implemented/tested:** native binding verification, source snapshots before launch, preservation and exact preview rollback. **Recommendation:** compare actual pixels to the targets and narrow a visible regression before adding scope. Private reports, controllers, raw reasoning and machine identifiers are not published.
+
+
 ## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate

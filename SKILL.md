@@ -41,7 +41,7 @@ This skill grants no new authority to start compute, install tools, change
 models, delete data, spend money, launch duplicate owners, or merge main.
 Do not ask again for routine actions already authorized. A legacy suggestion
 to use downloaded assets or cloud rescue code cannot override a run that
-requires original local-Qwen Blender assets and local gameplay authorship.
+requires original local-model Blender assets and local gameplay authorship.
 
 ## Select the matching harness profile
 
@@ -128,6 +128,12 @@ verified cause versus hypothesis, failed attempts, effective repair, evidence,
 and prevention status. Mark each guard as **implemented/tested**, **procedure**,
 **recommendation**, or **pending native validation**; do not describe a rule
 in a document as an enforced control.
+
+
+For model-specific follow-ups, read the [GLM 5.3 Flash scope notes](docs/LOCAL-NATIVE-LOOPS.md#glm-53-flash-qualification-and-static-street-work)
+and incidents N58–N62. Preserve the earlier Qwen results as historical evidence.
+Name the exact model revision, quantization, runtime, reasoning options and test
+scope; a new model's fixture or scoped art recovery is not a matched benchmark.
 
 ## Reference map
 
