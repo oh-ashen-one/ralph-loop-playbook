@@ -342,6 +342,23 @@ lighting and depth**. These are category scores, never an acceptance fraction
 or a count of successful candidates. No finished-art or playable-game acceptance
 was established. N62 retains the sanitized immutable identities.
 
+Later elevated-L iterations are recorded separately in N63–N65. A combined
+High task exhausted 8,192 output tokens without a write; a smaller rail/sleeper
+request saved useful source using 1,823 completion tokens. Source review then
+found inward cube winding and a contact gap, and GLM supplied a distinct
+correction before the first native execution. Successful saving, corrected
+geometry and native visual outcomes are different evidence levels.
+
+Candidate 0007's complete public critic response said FIX but failed JSON
+syntax. One explicitly recorded punctuation-only copy recovered the unchanged
+meaning; the original response remained a parse failure, never an unrepaired
+PASS. This is not permission to recover truncated reasoning, tool actions or
+substantive file content. Candidate 0008's fresh valid JSON also remained FIX,
+with 2/5 in each visual category. Actual pixels showed the new support shadows
+but also an incomplete deck, empty city backdrop and absent character/car.
+Retain the critic's original judgment and separately attribute pixel-review
+disagreements; do not edit its meaning to fit the builder's explanation.
+
 **Implemented/tested:** exact current-write byte gating, preserved failures,
 source-byte snapshots before native launch, source/build/capture/input linkage,
 owned cutoff/identity checks, and the qualification positive/negative fixture.

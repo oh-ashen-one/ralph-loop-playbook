@@ -530,6 +530,29 @@ the conclusions. Scope is this run, not a universal model capability claim.
 - **Implemented/tested:** native binding verification, source snapshots before launch, preservation and exact preview rollback. **Recommendation:** compare actual pixels to the targets and narrow a visible regression before adding scope. Private reports, controllers, raw reasoning and machine identifiers are not published.
 
 
+## N63 — A smaller GLM art task recovered useful source after an output-limit failure
+
+- **Scope:** October 9, same pinned GLM model/quantization/runtime and MTP-off setting in the GLM scope notes; original elevated-L static art, not gameplay.
+- **Observed failure:** a combined rail/sleeper/bracing request at High exhausted 8,192 completion tokens with zero write calls and no saved source. The attempt and owned shutdown were retained; no incomplete reasoning was salvaged.
+- **Changed strategy:** a separate smaller rail/sleeper-only request, with bracing deferred, saved 2,047 bytes using 1,823 completion tokens across four serial turns. Exact decoded submission/reread/hash/LF verification and an actual model-requested post-write read passed. The saved source still required a correctness review and subsequent GLM correction (N64).
+- **Outcome/status:** task splitting produced a useful artifact; it did not itself pass native art or gameplay acceptance. Subsequent corrected candidate 0007 rendered its track rhythm, and candidate 0008 added joined longitudinal supports. Fresh visual verdicts remained FIX, with 2/5 in each category. This is one scoped recovery, not proof of a universally superior effort or token budget.
+- **Recommendation:** preserve the larger failure, smaller submission, source correction and native outcome as separate events. If reduced requests repeatedly save nothing, stop that request pattern and diagnose or choose a bounded alternative rather than increasing the budget blindly.
+
+## N64 — GLM cube winding and contact defects were caught before native execution
+
+- **Observed:** review of the saved small rail module found manually wound cube faces pointing inward, an unclear UV construction sequence and a 0.01 m gap between rail bases and sleepers. That source was preserved and rejected before engine execution; no failed native render is claimed for it.
+- **Proven repair:** local GLM replaced the manual cube helper with standard outward-facing primitives retaining finite UVs and applied scale, corrected rail contact and set the new rail material's metallic value. No cloud gameplay/mesh replacement or shared-material mutation occurred.
+- **Measured outcome:** corrected candidate 0007 exported/imported and rendered natively with 106 meshes and 34,116 evaluated triangles. Its current source/build/capture/input binding passed; actual pixels showed rails/sleepers. Candidate 0008's 132 meshes and 34,428 evaluated triangles added joined supports and visible structural shadows. Both remained static WIP, not accepted finished art.
+- **Implemented/tested:** preserved rejected source, independent review before the first native launch, exact file roundtrip, evaluated export/import and actual-pixel inspection. **Recommendation:** distinguish half-extents from full cube dimensions, inspect face orientation/contact/UVs before rendering, and retain a verified fallback.
+
+## N65 — A complete GLM critic response failed JSON syntax; meaning stayed unchanged
+
+- **Observed:** fresh Max pixel critic 0007 received four native frames plus two reference images with 4,989 expanded prompt tokens. Its complete public response ended normally and said FIX, with 2/5 in each category, but a missing final gap-object brace caused JSON decoding to fail.
+- **Bounded handling:** the original response and parse failure remained preserved. A separately labeled cloud infrastructure copy inserted only that closing brace; semantic text, scores and verdict were unchanged. The original was never counted as valid unrepaired JSON or as a PASS. No extra model request was used for that punctuation repair.
+- **Limit:** this handling does not authorize salvaging truncated reasoning, incomplete tool actions, or substantive file content. If completion or meaning is ambiguous, keep the report UNVERIFIED and use a bounded changed strategy.
+- **Independent follow-up:** critic 0008 returned valid JSON and remained FIX with 2/5 in each category. Well-formed output still did not guarantee pixel grounding: some texture, cornice, crosswalk and shadow claims contradicted inspected native pixels. Original critic judgments were retained alongside separately attributed cloud pixel review, not rewritten.
+- **Evidence/status:** native 0008 source tree 1d85ac24c787cd617c48070b822be11701fbecb2c43776b38339539aa9a7ed00; build manifest 29b110d2ed698aa9dbb8df2cd8468c88be4a5a063dd1af66d49148956692e8fb; street-eye PNG dc86c314dbed4cdcac70f40545b18d808ca8de92a0501de05b52614fb9942fb9 captured 03:51:39.104546 UTC. Static source-bound visual evidence only; no player motion, frame-rate, mission or finished-game claim.
+
 ## Recording future incidents
 
 Record: timestamp and scope; observed symptom; proven cause and separate
