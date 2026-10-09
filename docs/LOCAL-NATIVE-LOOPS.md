@@ -400,6 +400,23 @@ followed by matched native captures and a valid typed FIX critique. Do not
 raise or delete an assertion to invent a pass. A future deliberate scope revision must state its purpose and obtain
 fresh geometry/render evidence. See the incident for dated outcomes.
 
+N71 records a later full-file schema/preimage rejection and context boundary,
+followed by a fresh full-source request that emitted no public artifact. Its
+mechanically checked transport was never exercised by the model. One changed
+High request supplied only a hip-contact block and output-path edit through an
+exact preimage/unique-anchor tool. It saved the complete resulting file using
+597 completion tokens, then verified it through an actual read-only model
+request. The output ceiling stayed 8,192. Manager contributions were scope,
+anchors, isolation and validation; local GLM chose the art values. Keep this
+source outcome separate from geometry and native visual review. An isolated
+project also needs scoped export/import/build/capture paths and verified own
+read-only texture aliases; copying a controller can retain an old path guard.
+Check actual remaining immutable stage IDs before resuming a failed stage.
+Count generated replacement bytes separately from the resulting file, whose
+unchanged baseline is not newly generated throughput. The later native critic
+returned a valid scoped PASS, while cloud pixel review retained overall FIX;
+keep both judgments and their evidence limits rather than rewriting the report.
+
 **Implemented/tested:** exact current-write byte gating, preserved failures,
 source-byte snapshots before native launch, source/build/capture/input linkage,
 owned cutoff/identity checks, and the qualification positive/negative fixture.
